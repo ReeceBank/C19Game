@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: e34e2033f66ab974d9a5330e50393492
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Card1: {fileID: 2878779950509762727, guid: d0fa5af256d06cf48bd5db0bf50db599, type: 3}
+  - Card3: {fileID: 7639948987146079953, guid: cc562c1126f2f204bb8aeff485551d5f, type: 3}
+  - PlayerArea: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

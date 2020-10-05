@@ -11,7 +11,7 @@ public class dragdrop : MonoBehaviour
     private GameObject dropzone;
     private Vector2 startPosition;
     private GameObject startParent;
-    private HealthBarController healthBar;
+    public HealthBarController healthBar;
 
     //C edit
 
@@ -67,9 +67,37 @@ public class dragdrop : MonoBehaviour
         /*
          * code the effects of cards played
          * */
-        healthBar.changeHealth(-1);
+        // just using +5 as a place holder
+        if (gameObject.name.Contains("Mask"))
+        {
+           healthBar.changeHealth(+5);
+        }
+        if (gameObject.name.Contains("Sanitizer"))
+        {
+           healthBar.changeHealth(+5);
+        }
+        if (gameObject.name.Contains("Shop"))
+        {
+            healthBar.changeHealth(+5);
+        }
+        if (gameObject.name.Contains("Wash_H"))
+        {
+            healthBar.changeHealth(+5);
+        }
+        if (gameObject.name.Contains("Wash_M"))
+        {
+            healthBar.changeHealth(+5);
+        }
+        if (gameObject.name.Contains("Iron"))
+        {
+            healthBar.changeHealth(+5);
+        }
+
+
+
+        Debug.Log("name " + gameObject.name );
         Destroy(gameObject);
-        //C edit
+       //C edit
     }
     
 }

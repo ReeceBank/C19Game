@@ -2540,6 +2540,7 @@ MonoBehaviour:
     type: 3}
   PlayerArea: {fileID: 304859656}
   cards: []
+  healthBar: {fileID: 0}
 --- !u!114 &1854922509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3990,8 +3991,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 8667008885251523622}
-  currentHealth: 3
-  maxHealth: 3
+  currentHealth: 30
+  maxHealth: 30
 --- !u!1001 &3527001825562567727
 PrefabInstance:
   m_ObjectHideFlags: 0

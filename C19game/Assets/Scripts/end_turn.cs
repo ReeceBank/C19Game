@@ -13,17 +13,25 @@ public class end_turn : MonoBehaviour
     public GameObject ShoppingCart;
     public GameObject PlayerArea;
     public GameObject[] cards;
+    public HealthBarController healthBar;
+
 
     List<GameObject> deck = new List<GameObject>();
 
 
     void Start()
     {
+        Mask.name = "Mask";
+        Sanitizer.name = "Sanitizer";
+        ShoppingCart.name = "Shop";
+        WashH.name = "Wash_H";
+        WashM.name = "Wash_M";
+        Iron.name = "Iron";
         deck.Add(Mask);
         deck.Add(Sanitizer);
         deck.Add(Iron);
         deck.Add(WashM);
-        deck.Add(WashM);
+        deck.Add(WashH);
         deck.Add(ShoppingCart);
 
         cards = GameObject.FindGameObjectsWithTag("Card");
@@ -34,7 +42,7 @@ public class end_turn : MonoBehaviour
             playerCard.transform.SetParent(PlayerArea.transform, false);
 
         }
-
+        Debug.Log("The names of these three objects are " + Mask.name + Sanitizer.name);
     }
 
     public void Click()
@@ -47,6 +55,11 @@ public class end_turn : MonoBehaviour
             playerCard.transform.SetParent(PlayerArea.transform, false);
             
         }
+
+        //enemy plays
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
+        healthBar.changeHealth(-10);
+
     }
 
     // Update is called once per frame

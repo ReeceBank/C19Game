@@ -434,9 +434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cccd36b494b656e4c8433dbd91e63ea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  healthbar: {fileID: 8667008884309756431, guid: 9f6584ec328bbe548b8435de668ff69c,
-    type: 3}
+  healthBar: {fileID: 0}
 --- !u!114 &3105163461421504725
 MonoBehaviour:
   m_ObjectHideFlags: 0

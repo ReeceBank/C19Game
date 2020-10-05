@@ -25,6 +25,16 @@ public class end_turn : MonoBehaviour
         deck.Add(WashM);
         deck.Add(WashM);
         deck.Add(ShoppingCart);
+
+        cards = GameObject.FindGameObjectsWithTag("Card");
+        for (var i = cards.Length; i < 4; i++)
+        {
+
+            GameObject playerCard = Instantiate(deck[Random.Range(0, deck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
+            playerCard.transform.SetParent(PlayerArea.transform, false);
+
+        }
+
     }
 
     public void Click()

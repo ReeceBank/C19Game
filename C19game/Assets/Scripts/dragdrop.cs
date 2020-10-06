@@ -29,6 +29,7 @@ public class dragdrop : MonoBehaviour
             transform.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             transform.SetParent(canvas.transform, true);
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -99,5 +100,6 @@ public class dragdrop : MonoBehaviour
         Destroy(gameObject);
        //C edit
     }
+
     
 }

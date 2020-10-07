@@ -96,7 +96,6 @@ public class dragdrop : MonoBehaviour
 
 
 
-        Debug.Log("name " + gameObject.name );
         Destroy(gameObject);
        //C edit
     }

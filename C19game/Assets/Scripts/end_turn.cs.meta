@@ -4,9 +4,15 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - Card1: {fileID: 2878779950509762727, guid: d0fa5af256d06cf48bd5db0bf50db599, type: 3}
-  - Card3: {fileID: 7639948987146079953, guid: cc562c1126f2f204bb8aeff485551d5f, type: 3}
+  - Mask: {instanceID: 0}
+  - Sanitizer: {instanceID: 0}
+  - Iron: {instanceID: 0}
+  - WashM: {instanceID: 0}
+  - WashH: {instanceID: 0}
+  - ShoppingCart: {instanceID: 0}
   - PlayerArea: {instanceID: 0}
+  - EnemyArea: {instanceID: 0}
+  - healthBar: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

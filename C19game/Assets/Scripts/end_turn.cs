@@ -11,13 +11,20 @@ public class end_turn : MonoBehaviour
     public GameObject WashM;
     public GameObject WashH;
     public GameObject ShoppingCart;
+
+    public GameObject dirty;
+    public GameObject ignorant;
+    public GameObject no;
+
     public GameObject PlayerArea;
+    public GameObject EnemyArea;
+
     public GameObject[] cards;
     public HealthBarController healthBar;
 
 
     List<GameObject> deck = new List<GameObject>();
-
+    List<GameObject> enemyDeck = new List<GameObject>();
 
     void Start()
     {
@@ -27,6 +34,7 @@ public class end_turn : MonoBehaviour
         WashH.name = "Wash_H";
         WashM.name = "Wash_M";
         Iron.name = "Iron";
+
         deck.Add(Mask);
         deck.Add(Sanitizer);
         deck.Add(Iron);
@@ -34,20 +42,33 @@ public class end_turn : MonoBehaviour
         deck.Add(WashH);
         deck.Add(ShoppingCart);
 
-        cards = GameObject.FindGameObjectsWithTag("Card");
-        for (var i = cards.Length; i < 4; i++)
-        {
+        enemyDeck.Add(dirty);
+        enemyDeck.Add(no);
+        enemyDeck.Add(ignorant);
 
+        cards = GameObject.FindGameObjectsWithTag("Card");
+
+        for (var i = 0; i < 4; i++)
+        {
+            GameObject enemyCard = Instantiate(enemyDeck[0], new Vector3(0, 0, 0), Quaternion.identity);
+            enemyCard.transform.SetParent(EnemyArea.transform, false);
+
+        }
+
+        for (var i = 0 ; i < 4; i++)
+        {
             GameObject playerCard = Instantiate(deck[Random.Range(0, deck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
             playerCard.transform.SetParent(PlayerArea.transform, false);
 
         }
+
         Debug.Log("The names of these three objects are " + Mask.name + Sanitizer.name);
     }
 
     public void Click()
     {
         cards = GameObject.FindGameObjectsWithTag("Card");
+
         for(var i = cards.Length ; i< 4; i++)
         {
             

@@ -797,6 +797,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166851046}
   m_CullTransparentMesh: 0
+--- !u!1 &258389602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2792575906578103486, guid: 68cdd7fca8537cb478f9de4e5cde287a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2576530425330801413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &302330200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2590,11 @@ MonoBehaviour:
   WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
   ShoppingCart: {fileID: 6505842996289411274, guid: e7b0459bfd7eef246b76db281e5fc8db,
     type: 3}
+  dirty: {fileID: 2640408065336675921, guid: c9241cd2ad2b2eb47a116ab8ac2707c8, type: 3}
+  ignorant: {fileID: 0}
+  no: {fileID: 0}
   PlayerArea: {fileID: 304859656}
+  EnemyArea: {fileID: 258389602}
   cards: []
   healthBar: {fileID: 0}
 --- !u!114 &1854922509
@@ -2905,7 +2915,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2055165100
 RectTransform:
   m_ObjectHideFlags: 0

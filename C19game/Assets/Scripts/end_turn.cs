@@ -14,7 +14,9 @@ public class end_turn : MonoBehaviour
 
     public GameObject dirty;
     public GameObject ignorant;
-    public GameObject no;
+    public GameObject itchy;
+    public GameObject unclean;
+    public GameObject unwashed;
 
     public GameObject PlayerArea;
     public GameObject EnemyArea;
@@ -22,9 +24,11 @@ public class end_turn : MonoBehaviour
     public GameObject[] cards;
     public HealthBarController healthBar;
 
-
+    public int enemyCardNum;
     List<GameObject> deck = new List<GameObject>();
     List<GameObject> enemyDeck = new List<GameObject>();
+
+    List<GameObject> enemyCards = new List<GameObject>();
 
     void Start()
     {
@@ -43,16 +47,20 @@ public class end_turn : MonoBehaviour
         deck.Add(ShoppingCart);
 
         enemyDeck.Add(dirty);
-        enemyDeck.Add(no);
-        enemyDeck.Add(ignorant);
+        enemyDeck.Add(ignorant); 
+        enemyDeck.Add(itchy); 
+        enemyDeck.Add(unclean); 
+        enemyDeck.Add(unwashed);
+
 
         cards = GameObject.FindGameObjectsWithTag("Card");
 
         for (var i = 0; i < 4; i++)
         {
-            GameObject enemyCard = Instantiate(enemyDeck[0], new Vector3(0, 0, 0), Quaternion.identity);
+            GameObject enemyCard = Instantiate(enemyDeck[Random.Range(0, enemyDeck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
             enemyCard.transform.SetParent(EnemyArea.transform, false);
 
+            enemyCards.Add(enemyCard);
         }
 
         for (var i = 0 ; i < 4; i++)
@@ -76,6 +84,10 @@ public class end_turn : MonoBehaviour
             playerCard.transform.SetParent(PlayerArea.transform, false);
             
         }
+
+       
+        Destroy(enemyCards[enemyCardNum]);
+        enemyCardNum--;
 
         //enemy plays
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();

@@ -1795,7 +1795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.5568628, b: 0.14901961, a: 1}
+  m_Color: {r: 0.9647059, g: 0.7254902, b: 0.23137255, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2014,7 +2014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8980392, g: 0.5568628, b: 0.14901961, a: 1}
+  m_Color: {r: 0.9647059, g: 0.7254902, b: 0.23137255, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2590,13 +2590,18 @@ MonoBehaviour:
   WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
   ShoppingCart: {fileID: 6505842996289411274, guid: e7b0459bfd7eef246b76db281e5fc8db,
     type: 3}
-  dirty: {fileID: 2640408065336675921, guid: c9241cd2ad2b2eb47a116ab8ac2707c8, type: 3}
-  ignorant: {fileID: 0}
-  no: {fileID: 0}
+  dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
+  ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
+    type: 3}
+  itchy: {fileID: 5139183430196458805, guid: 210e76a5f11131049a6f20c8219b6ec4, type: 3}
+  unclean: {fileID: 296272898888828040, guid: 6147e53dbe6a9e143b0d978746c8f9fa, type: 3}
+  unwashed: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0,
+    type: 3}
   PlayerArea: {fileID: 304859656}
   EnemyArea: {fileID: 258389602}
   cards: []
   healthBar: {fileID: 0}
+  enemyCardNum: 3
 --- !u!114 &1854922509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2959,14 +2964,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ee24ccc3cfecf147b1379a873aa3853, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: c49e501c48aa8954d9515ac08524d5c3, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 2
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 2
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2055165102
@@ -3368,7 +3373,7 @@ PrefabInstance:
     - target: {fileID: 1472740387466182334, guid: d9dd897bcf9fb164ba9510e24cd88d33,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.25490198
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2870511374040240774, guid: d9dd897bcf9fb164ba9510e24cd88d33,
         type: 3}
@@ -3608,7 +3613,7 @@ PrefabInstance:
     - target: {fileID: 2463191014938207350, guid: 68cdd7fca8537cb478f9de4e5cde287a,
         type: 3}
       propertyPath: m_Color.a
-      value: 0.2784314
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2792575906578103486, guid: 68cdd7fca8537cb478f9de4e5cde287a,
         type: 3}
@@ -3802,18 +3807,24 @@ PrefabInstance:
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.047058824
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.14117648
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.38039216
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 16f6420806e32d0469a0a8386c89d786,
+        type: 3}
     - target: {fileID: 3527001824957694399, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_LocalPosition.x

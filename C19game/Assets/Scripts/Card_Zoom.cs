@@ -6,7 +6,6 @@ public class Card_Zoom : MonoBehaviour
 {
     public GameObject Canvas;
     private GameObject zoomCard;
-    private bool click = false;
 
     public void Awake()
     {

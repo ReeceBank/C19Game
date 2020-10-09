@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class clickLogic : MonoBehaviour
 {
-    bool result;
+    public SceneLoader sceneLoader;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        sceneLoader = GameObject.Find("SceneSwitch").GetComponent<SceneLoader>();
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class clickLogic : MonoBehaviour
         bool valueThree = cardPlayedThree.coronaSymptomatic;
 
         //logic operation to determine correctness of answer
-        result = (valueOne || valueTwo || valueThree);
+        bool result = (valueOne || valueTwo || valueThree);
         return result;
 
     }
@@ -44,11 +45,14 @@ public class clickLogic : MonoBehaviour
         if (GetResult()) //calls above function to see if button clicked is Yes
         {
             Debug.Log("CORRECT!");
-
+            //ph moves to shop level if correct
+            sceneLoader.LoadOneForward();
         }
         else
         {
             Debug.Log("WRONG!!!!!!!!");
+            //ph moves back to main menu if wrong
+            sceneLoader.LoadOneBack();
         }
 
     }
@@ -58,11 +62,14 @@ public class clickLogic : MonoBehaviour
         if (!GetResult())
         {
             Debug.Log("CORRECT!");
-
+            //ph moves to shop level if correct
+            sceneLoader.LoadOneForward();
         }
         else
         {
             Debug.Log("WRONG!!!!!!!!");
+            //ph moves back to main menu if wrong
+            sceneLoader.LoadOneBack();
         }
 
     }

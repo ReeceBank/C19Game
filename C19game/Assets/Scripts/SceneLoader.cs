@@ -26,4 +26,14 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadInfoScene()
+    {
+        SceneManager.LoadScene("MiniGameInfoScene");
+    }
+
+    public void LoadMiniGame()
+    {
+        SceneManager.LoadScene("MiniGame");
+    }
 }

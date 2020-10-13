@@ -51,8 +51,8 @@ public class clickLogic : MonoBehaviour
         else
         {
             Debug.Log("WRONG!!!!!!!!");
-            //ph moves back to main menu if wrong
-            sceneLoader.LoadOneBack();
+            //ph moves to info scene if wrong
+            sceneLoader.LoadInfoScene();
         }
 
     }
@@ -68,8 +68,8 @@ public class clickLogic : MonoBehaviour
         else
         {
             Debug.Log("WRONG!!!!!!!!");
-            //ph moves back to main menu if wrong
-            sceneLoader.LoadOneBack();
+            //ph moves to info scene if wrong
+            sceneLoader.LoadInfoScene();
         }
 
     }

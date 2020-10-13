@@ -15,7 +15,7 @@ public class Card_Zoom : MonoBehaviour
 
     public void OnholdEnter()
     {
-
+        RectTransform objectRectTransform = gameObject.GetComponent<RectTransform>();
         zoomCard = Instantiate(gameObject, new Vector3(0,0,0), Quaternion.identity);
         zoomCard.transform.SetParent(Canvas.transform, false);
         zoomCard.name = "Zoom_card";

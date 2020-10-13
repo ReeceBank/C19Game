@@ -70,6 +70,7 @@ public class end_turn : MonoBehaviour
 
         }
 
+        Debug.Log("The names of these three objects are " + Mask.name + Sanitizer.name);
     }
 
     public void Click()
@@ -84,53 +85,23 @@ public class end_turn : MonoBehaviour
             
         }
 
-        StartCoroutine(Enemy_Play_with_Delay());
+       
+        Destroy(enemyCards[enemyCardNum]);
+        if(enemyCardNum > 0)
+        {
+            enemyCardNum--;
+        }
+        
 
-
-   
+        //enemy plays
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
+        healthBar.changeHealth(-10);
 
     }
-
-    
 
     // Update is called once per frame
     void Update()
     {
         
     }
-
-
-    IEnumerator Enemy_Play_with_Delay()
-    {
-        // Code before the pause
-
-        //create a zoomed card
-        GameObject zoomCard = Instantiate(enemyCards[enemyCardNum], new Vector3(0, 0, 0), Quaternion.identity);
-        zoomCard.transform.SetParent(GameObject.Find("Zoom Area").transform, false);
-        zoomCard.name = "Zoom_card";
-        zoomCard.layer = LayerMask.NameToLayer("Zoom");
-
-        RectTransform rect = zoomCard.GetComponent<RectTransform>();
-        rect.sizeDelta = new Vector2(600, 900);
-
-
-
-        
-        yield return new WaitForSeconds(3); // Wait or a number of seconds
-        
-        // Code after the pause
-        Destroy(zoomCard); // destroy zoomed card
-
-
-        //enemy plays
-        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
-        healthBar.changeHealth(-10);
-
-        Destroy(enemyCards[enemyCardNum]);
-        if (enemyCardNum > 0)
-        {
-            enemyCardNum--;
-        }
-    }
-
 }

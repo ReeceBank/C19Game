@@ -58,8 +58,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
-      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -73,25 +71,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12222}
     - Class: 114
-      Script: {instanceID: 12276}
-    - Class: 114
       Script: {instanceID: 12546}
     - Class: 114
       Script: {instanceID: 12938}
     - Class: 114
       Script: {instanceID: 13290}
     - Class: 114
-      Script: {instanceID: 13310}
-    - Class: 114
       Script: {instanceID: 13622}
     - Class: 114
       Script: {instanceID: 13726}
     - Class: 114
       Script: {instanceID: 13794}
-    - Class: 114
-      Script: {instanceID: 14018}
-    - Class: 114
-      Script: {instanceID: 14194}
     - Class: 114
       Script: {instanceID: 14366}
     - Class: 115
@@ -123,6 +113,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
@@ -134,6 +126,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12222}
     - Class: 114
+      Script: {instanceID: 12276}
+    - Class: 114
       Script: {instanceID: 12546}
     - Class: 114
       Script: {instanceID: 12938}
@@ -142,9 +136,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13290}
     - Class: 114
+      Script: {instanceID: 13310}
+    - Class: 114
       Script: {instanceID: 13622}
     - Class: 114
       Script: {instanceID: 13726}
+    - Class: 114
+      Script: {instanceID: 14018}
+    - Class: 114
+      Script: {instanceID: 14194}
     - Class: 114
       Script: {instanceID: 14366}
     - Class: 115
@@ -1044,8 +1044,8 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Leaderboard.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/MiniGame.unity
   - Assets/Scenes/ShoppingLevel.unity
-  playerPath: D:/work related/CSC3003S/capstone 2020/Prototype/C19/test.apk
+  - Assets/Scenes/Leaderboard.unity
+  playerPath: D:/work related/CSC3003S/capstone 2020/Prototype/C19/C19_test.apk

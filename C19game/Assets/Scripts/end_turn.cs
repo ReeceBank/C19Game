@@ -87,7 +87,11 @@ public class end_turn : MonoBehaviour
 
        
         Destroy(enemyCards[enemyCardNum]);
-        enemyCardNum--;
+        if(enemyCardNum > 0)
+        {
+            enemyCardNum--;
+        }
+        
 
         //enemy plays
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();

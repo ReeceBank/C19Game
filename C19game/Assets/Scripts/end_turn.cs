@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class end_turn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Player card objects
     public GameObject Mask;
     public GameObject Sanitizer;
     public GameObject Iron;
@@ -12,12 +12,14 @@ public class end_turn : MonoBehaviour
     public GameObject WashH;
     public GameObject ShoppingCart;
 
+    //enemy card obbjects
     public GameObject dirty;
     public GameObject ignorant;
     public GameObject itchy;
     public GameObject unclean;
     public GameObject unwashed;
 
+    //enemy and player playing area
     public GameObject PlayerArea;
     public GameObject EnemyArea;
 
@@ -25,6 +27,8 @@ public class end_turn : MonoBehaviour
     public HealthBarController healthBar;
 
     public int enemyCardNum;
+    public int cardIndex;
+    //enemy and player decks
     List<GameObject> deck = new List<GameObject>();
     List<GameObject> enemyDeck = new List<GameObject>();
 
@@ -32,6 +36,7 @@ public class end_turn : MonoBehaviour
 
     void Start()
     {
+        //get player card IDs
         Mask.name = "Mask";
         Sanitizer.name = "Sanitizer";
         ShoppingCart.name = "Shop";
@@ -39,6 +44,7 @@ public class end_turn : MonoBehaviour
         WashM.name = "Wash_M";
         Iron.name = "Iron";
 
+        //adds user cards to a deck
         deck.Add(Mask);
         deck.Add(Sanitizer);
         deck.Add(Iron);
@@ -46,6 +52,7 @@ public class end_turn : MonoBehaviour
         deck.Add(WashH);
         deck.Add(ShoppingCart);
 
+        //adds enemy cards to a deck
         enemyDeck.Add(dirty);
         enemyDeck.Add(ignorant); 
         enemyDeck.Add(itchy); 
@@ -55,6 +62,7 @@ public class end_turn : MonoBehaviour
 
         cards = GameObject.FindGameObjectsWithTag("Card");
 
+        //fill enemy hand with cards
         for (var i = 0; i < 4; i++)
         {
             GameObject enemyCard = Instantiate(enemyDeck[Random.Range(0, enemyDeck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
@@ -63,6 +71,7 @@ public class end_turn : MonoBehaviour
             enemyCards.Add(enemyCard);
         }
 
+        //fill player hand with cards
         for (var i = 0 ; i < 4; i++)
         {
             GameObject playerCard = Instantiate(deck[Random.Range(0, deck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
@@ -76,6 +85,7 @@ public class end_turn : MonoBehaviour
     {
         cards = GameObject.FindGameObjectsWithTag("Card");
 
+        //on click the user recieves a new card
         for(var i = cards.Length ; i< 4; i++)
         {
             
@@ -84,21 +94,15 @@ public class end_turn : MonoBehaviour
             
         }
 
+        //and enemy plays a card
         StartCoroutine(Enemy_Play_with_Delay());
-
-
-   
-
     }
-
-    
 
     // Update is called once per frame
     void Update()
     {
         
     }
-
 
     IEnumerator Enemy_Play_with_Delay()
     {
@@ -113,20 +117,43 @@ public class end_turn : MonoBehaviour
         RectTransform rect = zoomCard.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(600, 900);
 
-
-
-        
         yield return new WaitForSeconds(3); // Wait or a number of seconds
         
         // Code after the pause
         Destroy(zoomCard); // destroy zoomed card
 
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
 
         //enemy plays
-        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
-        healthBar.changeHealth(-10);
+        //when a specific card is played it affects the system differently
+        if (enemyCards[enemyCardNum].name.Contains("dirtyCart"))
+        {
+            healthBar.changeHealth(-5);
+        }
 
+        else if (enemyCards[enemyCardNum].name.Contains("Ignorant"))
+        {
+            healthBar.changeHealth(-5);
+        }
+
+        else if (enemyCards[enemyCardNum].name.Contains("Itchy"))
+        {
+            healthBar.changeHealth(-10);
+        }
+
+        else if (enemyCards[enemyCardNum].name.Contains("uncleanedSurface"))
+        {
+            healthBar.changeHealth(-5);
+        }
+
+        else if (enemyCards[enemyCardNum].name.Contains("UnwashedMask"))
+        {
+            healthBar.changeHealth(-10);
+        }
+        
+        //detroy card in enemy hand
         Destroy(enemyCards[enemyCardNum]);
+        //decrement enemy card number
         if (enemyCardNum > 0)
         {
             enemyCardNum--;

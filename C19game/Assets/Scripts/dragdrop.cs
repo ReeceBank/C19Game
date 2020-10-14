@@ -13,8 +13,6 @@ public class dragdrop : MonoBehaviour
     private GameObject startParent;
     public HealthBarController healthBar;
 
-    //C edit
-
     private void Awake()
     {
         canvas = GameObject.Find("Main Canvas");
@@ -37,8 +35,6 @@ public class dragdrop : MonoBehaviour
         overzone = true;
         dropzone = collision.gameObject;
     }
-
-
 
     public void startDrag()
     {
@@ -94,10 +90,7 @@ public class dragdrop : MonoBehaviour
             healthBar.changeHealth(+5);
         }
 
-
-
         Destroy(gameObject);
-       //C edit
     }
 
 

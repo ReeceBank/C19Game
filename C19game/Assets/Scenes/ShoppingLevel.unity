@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 498676269}
   - component: {fileID: 498676271}
   - component: {fileID: 498676270}
+  - component: {fileID: 498676272}
   m_Layer: 5
   m_Name: SliderROI
   m_TagString: Untagged
@@ -365,6 +366,22 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &498676272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498676268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb4f15ed705b3848be3378078487b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ROI: {fileID: 498676271}
+  currentROI: 0
+  maxROI: 30
+  level: {fileID: 1087826604}
 --- !u!1001 &742339308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -972,6 +989,7 @@ MonoBehaviour:
   cards: []
   healthBar: {fileID: 0}
   enemyCardNum: 3
+  cardIndex: 0
 --- !u!114 &989742803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,7 +1311,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LOW
+  m_Text: 
 --- !u!222 &1087826605
 CanvasRenderer:
   m_ObjectHideFlags: 0

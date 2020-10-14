@@ -11,6 +11,7 @@ public class leaderboard : MonoBehaviour
     public List<Entry> entryList;
     public List<Transform> transformList;
 
+
     public void Awake()
     {
         entryContainer = transform.Find("Container");
@@ -25,7 +26,7 @@ public class leaderboard : MonoBehaviour
 
         if(PlayerPrefs.GetString("table") == "") // if it doesnt create one
         {
-            Debug.Log("doesnt creating one");
+            //Debug.Log("doesnt creating one");
 
             entryList = new List<Entry>()
             {
@@ -40,7 +41,7 @@ public class leaderboard : MonoBehaviour
         else
         {
             string jsonString = PlayerPrefs.GetString("table");
-            Debug.Log("exist");
+            //Debug.Log("exist");
             scores = JsonUtility.FromJson<Scores>(jsonString);
         }
 
@@ -136,6 +137,52 @@ public class leaderboard : MonoBehaviour
     public class Scores
     {
         public List<Entry> entries;
+    }
+
+    public string[] get_highscore()
+    {
+        string[] temp = new string[2];
+        Scores scores;
+        if (PlayerPrefs.GetString("table") == "") // if it doesnt create one
+        {
+            //Debug.Log("doesnt creating one");
+
+            entryList = new List<Entry>()
+            {
+            new Entry{score = 0, name = "---"},
+            };
+
+            scores = new Scores { entries = entryList };
+            string json = JsonUtility.ToJson(scores);
+            PlayerPrefs.SetString("table", json);
+            PlayerPrefs.Save();
+        }
+        else
+        {
+            string jsonString = PlayerPrefs.GetString("table");
+            //Debug.Log("exist");
+            scores = JsonUtility.FromJson<Scores>(jsonString);
+        }
+
+
+        //sort
+        for (int i = 0; i < scores.entries.Count; i++)
+        {
+            for (int j = i + 1; j < scores.entries.Count; j++)
+            {
+                if (scores.entries[j].score > scores.entries[i].score)
+                {
+                    Entry tmp = scores.entries[i];
+                    scores.entries[i] = scores.entries[j];
+                    scores.entries[j] = tmp;
+                }
+            }
+        }
+
+        temp[0] = scores.entries[0].name;
+        temp[1] = scores.entries[0].score.ToString();
+
+        return temp;
     }
 
 }

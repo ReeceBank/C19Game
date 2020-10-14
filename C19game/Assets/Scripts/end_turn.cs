@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class end_turn : MonoBehaviour
 {
@@ -12,7 +14,7 @@ public class end_turn : MonoBehaviour
     public GameObject WashH;
     public GameObject ShoppingCart;
 
-    //enemy card obbjects
+    //enemy card objects
     public GameObject dirty;
     public GameObject ignorant;
     public GameObject itchy;
@@ -120,6 +122,11 @@ public class end_turn : MonoBehaviour
         RectTransform rect = zoomCard.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(600, 900);
 
+        //disable end turn button
+        GameObject endturn = GameObject.Find("EndTurnButton");
+        Button buttn = endturn.GetComponent<Button>();
+        buttn.interactable = false;
+
         yield return new WaitForSeconds(3); // Wait or a number of seconds
         
         // Code after the pause
@@ -162,6 +169,9 @@ public class end_turn : MonoBehaviour
         {
             enemyCardNum--;
         }
+
+        //enable endturn button
+        buttn.interactable = true;
     }
 
 }

@@ -144,12 +144,12 @@ public class end_turn : MonoBehaviour
             healthBar.changeHealth(-10);
         }
 
-        else if (enemyCards[enemyCardNum].name.Contains("uncleanedSurface"))
+        else if (enemyCards[enemyCardNum].name.Contains("UncleanedSurface"))
         {
             healthBar.changeHealth(-5);
         }
 
-        else if (enemyCards[enemyCardNum].name.Contains("UnwashedMask"))
+        else if (enemyCards[enemyCardNum].name.Contains("unwashedMask"))
         {
             healthBar.changeHealth(-10);
         }

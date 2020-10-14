@@ -18,6 +18,7 @@ public class end_turn : MonoBehaviour
     public GameObject itchy;
     public GameObject unclean;
     public GameObject unwashed;
+    public GameObject cardBack;
 
     //enemy and player playing area
     public GameObject PlayerArea;
@@ -33,7 +34,7 @@ public class end_turn : MonoBehaviour
     List<GameObject> enemyDeck = new List<GameObject>();
 
     List<GameObject> enemyCards = new List<GameObject>();
-
+    List<GameObject> enemyCardBack = new List<GameObject>();
     void Start()
     {
         //get player card IDs
@@ -66,9 +67,11 @@ public class end_turn : MonoBehaviour
         for (var i = 0; i < 4; i++)
         {
             GameObject enemyCard = Instantiate(enemyDeck[Random.Range(0, enemyDeck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
-            enemyCard.transform.SetParent(EnemyArea.transform, false);
+            GameObject enemyCardBacks = Instantiate(cardBack, new Vector3(0, 0, 0), Quaternion.identity);
+            enemyCardBacks.transform.SetParent(EnemyArea.transform, false);
 
             enemyCards.Add(enemyCard);
+            enemyCardBack.Add(enemyCardBacks);
         }
 
         //fill player hand with cards
@@ -153,6 +156,7 @@ public class end_turn : MonoBehaviour
         
         //detroy card in enemy hand
         Destroy(enemyCards[enemyCardNum]);
+        Destroy(enemyCardBack[enemyCardNum]);
         //decrement enemy card number
         if (enemyCardNum > 0)
         {

@@ -967,11 +967,14 @@ MonoBehaviour:
   unclean: {fileID: 296272898888828040, guid: 6147e53dbe6a9e143b0d978746c8f9fa, type: 3}
   unwashed: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0,
     type: 3}
+  cardBack: {fileID: 6984186805644984575, guid: d8ac59dfb8ccba64ead92c9e9b1eea5c,
+    type: 3}
   PlayerArea: {fileID: 1784190651}
   EnemyArea: {fileID: 1248804691}
   cards: []
   healthBar: {fileID: 0}
   enemyCardNum: 3
+  cardIndex: 0
 --- !u!114 &989742803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,7 +1774,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23, y: 81.395}
+  m_AnchoredPosition: {x: -22.99997, y: 81.39502}
   m_SizeDelta: {x: -385.09186, y: -719.1139}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511687129

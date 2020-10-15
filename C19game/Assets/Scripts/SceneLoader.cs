@@ -41,5 +41,13 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("EndGame");
     }
 
+    public void LoadShopLevel()
+    {
+        SceneManager.LoadScene("ShoppingLevel");
+    }
 
+    public void LoadQuarantineLevel()
+    {
+        SceneManager.LoadScene("QuarantineLevel");
+    }
 }

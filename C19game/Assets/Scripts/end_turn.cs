@@ -26,6 +26,9 @@ public class end_turn : MonoBehaviour
     public GameObject PlayerArea;
     public GameObject EnemyArea;
 
+    public GameObject Grey_playerarea;
+    public GameObject Grey_enemyarea;
+
     public GameObject[] cards;
     public HealthBarController healthBar;
 
@@ -64,6 +67,12 @@ public class end_turn : MonoBehaviour
 
 
         cards = GameObject.FindGameObjectsWithTag("Card");
+
+        //create the grey boxes 
+        Grey_enemyarea = GameObject.Find("Grey_enemyarea");
+
+        Grey_playerarea = GameObject.Find("Grey_playerarea");
+        Grey_playerarea.SetActive(false);
 
         //fill enemy hand with cards
         for (var i = 0; i < 4; i++)
@@ -127,6 +136,10 @@ public class end_turn : MonoBehaviour
         Button buttn = endturn.GetComponent<Button>();
         buttn.interactable = false;
 
+        //disable the player area
+        Grey_playerarea.SetActive(true);
+        Grey_enemyarea.SetActive(false);
+
         yield return new WaitForSeconds(3); // Wait or a number of seconds
         
         // Code after the pause
@@ -170,8 +183,13 @@ public class end_turn : MonoBehaviour
             enemyCardNum--;
         }
 
+        //enable the playerarea
+        Grey_playerarea.SetActive(false);
+        Grey_enemyarea.SetActive(true);
+
         //enable endturn button
         buttn.interactable = true;
+
     }
 
 }

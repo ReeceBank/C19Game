@@ -16,6 +16,8 @@ public class end_turn : MonoBehaviour
     public GameObject WashM;
     public GameObject WashH;
     public GameObject ShoppingCart;
+    public GameObject avoid_crowd;
+    public GameObject Bed_apart;
 
     //enemy card objects
     public GameObject dirty;
@@ -55,12 +57,17 @@ public class end_turn : MonoBehaviour
         if (scene.name.Contains("ShoppingLevel"))
         {
             //add shopping related cards
+            ShoppingCart.name = "Shop";
             deck.Add(ShoppingCart);
         }
         if (scene.name.Contains("QuarantineLevel"))
         {
             //add quaratine related cards
+            Bed_apart.name = "Bed";
+            deck.Add(Bed_apart);
+            
         }
+
 
         //gets the brain script from the brain object
         aiBrain = GameObject.Find("AiBrain").GetComponent<AiBrain>();
@@ -68,7 +75,6 @@ public class end_turn : MonoBehaviour
         //set player card IDs
         Mask.name = "Mask";
         Sanitizer.name = "Sanitizer";
-        ShoppingCart.name = "Shop";
         WashH.name = "Wash_H";
         WashM.name = "Wash_M";
         Iron.name = "Iron";
@@ -79,7 +85,6 @@ public class end_turn : MonoBehaviour
         deck.Add(Iron);
         deck.Add(WashM);
         deck.Add(WashH);
-        //deck.Add(ShoppingCart);  // add when in shopping level
 
         //set enemy card ID
         dirty.name = "dirtyCart";

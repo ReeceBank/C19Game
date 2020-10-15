@@ -1560,6 +1560,9 @@ MonoBehaviour:
   WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
   ShoppingCart: {fileID: 6505842996289411274, guid: e7b0459bfd7eef246b76db281e5fc8db,
     type: 3}
+  avoid_crowd: {fileID: 0}
+  Bed_apart: {fileID: 4154624907186219674, guid: 5a1ca4bec048b834d92f685ab18fec92,
+    type: 3}
   dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
   ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
     type: 3}
@@ -2582,7 +2585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7411765, g: 0.59607846, b: 0.3803922, a: 1}
+  m_Color: {r: 0.121568635, g: 0.13725491, b: 0.22352943, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

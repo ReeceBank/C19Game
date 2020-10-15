@@ -1,5 +1,21 @@
 sceneSetups:
-- path: Assets/Scenes/ShoppingLevel.unity
+- path: Assets/Scenes/MiniGame.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/LevelSelect.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
+- path: Assets/Scenes/Morbidities.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/MiniGameInfoScene.unity
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0

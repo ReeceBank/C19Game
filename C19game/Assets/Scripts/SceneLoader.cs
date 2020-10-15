@@ -54,4 +54,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("LevelSelect");
     }
+    public void LoadMorbid()
+    {
+        SceneManager.LoadScene("Morbidities");
+    }
 }

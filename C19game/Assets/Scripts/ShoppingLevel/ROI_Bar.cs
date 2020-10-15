@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class ROI_Bar : MonoBehaviour
 {
     public Slider ROI;
-    public int currentROI = 0;
+    public HealthBarController healthBar;
+    public int currentROI = 15;
     public int maxROI = 30;
 
     [SerializeField]
@@ -15,7 +16,7 @@ public class ROI_Bar : MonoBehaviour
     void Awake()
     {
         ROI = GetComponent<Slider>();
-
+        healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
     }
     void Update()
     {
@@ -25,11 +26,11 @@ public class ROI_Bar : MonoBehaviour
         
         if (currentROI >= 20)
         {
-            level.text = "HIGH";
+            level.text = "HIGH!!!";
         }
         if (currentROI <= 19 && currentROI >= 10)
         {
-            level.text = "MED";
+            level.text = "MEDIUM";
         }
         if (currentROI <= 9)
         {
@@ -39,18 +40,15 @@ public class ROI_Bar : MonoBehaviour
     }
     public void changeROI(int dHP)
     {
+        //when the players risk of infection is at maxiumum, the player takes hp damage when they take more ROI damage
         if (currentROI + dHP > 30)
         {
             currentROI = 30;
-            // do hp dmg
-
+            healthBar.changeHealth(-10);
         }
         else if (currentROI + dHP < 0)
         {
-            
             currentROI = 0;
-
-            
         }
         else
         {

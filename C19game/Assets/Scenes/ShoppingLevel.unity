@@ -481,9 +481,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 30
   m_WholeNumbers: 1
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -500,7 +500,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ROI: {fileID: 498676271}
-  currentROI: 0
+  healthBar: {fileID: 0}
+  currentROI: 10
   maxROI: 30
   level: {fileID: 1087826604}
 --- !u!1 &555824150
@@ -836,7 +837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 6.299988, y: 0.0000038146973}
+  m_AnchoredPosition: {x: 6.2999573, y: 0.0000038146973}
   m_SizeDelta: {x: 22.276917, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &770013142
@@ -1512,7 +1513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ROI:'
+  m_Text: 'Infection Risk:'
 --- !u!222 &1031356967
 CanvasRenderer:
   m_ObjectHideFlags: 0

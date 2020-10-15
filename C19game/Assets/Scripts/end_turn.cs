@@ -160,7 +160,7 @@ public class end_turn : MonoBehaviour
 
         //Finds the Hp bar -------------------------------------------------------------(ROI and SocialDistansce need to still go here
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
-        roi = GameObject.Find("ROI_Bar").GetComponent<ROI_Bar>();
+        roi = GameObject.Find("SliderROI").GetComponent<ROI_Bar>();
         social_D = GameObject.Find("Social_D").GetComponent<Social_D>();
         float multiplier = social_D.multipier; //multiplier on effects (changes depending on distance)
 
@@ -169,26 +169,31 @@ public class end_turn : MonoBehaviour
         if (enemyCards[enemyCardNum].name.Contains("dirtyCart"))
         {
             healthBar.changeHealth(-5);
+            roi.changeROI(5);
         }
 
         else if (enemyCards[enemyCardNum].name.Contains("Ignorant"))
         {
             healthBar.changeHealth(-5);
+            roi.changeROI(5);
         }
 
         else if (enemyCards[enemyCardNum].name.Contains("Itchy"))
         {
             healthBar.changeHealth(-10);
+            roi.changeROI(5);
         }
 
         else if (enemyCards[enemyCardNum].name.Contains("UncleanedSurface"))
         {
             healthBar.changeHealth(-5);
+            roi.changeROI(5);
         }
 
         else if (enemyCards[enemyCardNum].name.Contains("unwashedMask"))
         {
             healthBar.changeHealth(-10);
+            roi.changeROI(5);
         }
         
         //detroy a card in enemy hand and in their deck, since its been played
@@ -203,6 +208,7 @@ public class end_turn : MonoBehaviour
         }
 
         //enable the playerarea
+        Debug.Log("enemy turn ended");
         Grey_playerarea.SetActive(false);
         //Grey_enemyarea.SetActive(true);
 

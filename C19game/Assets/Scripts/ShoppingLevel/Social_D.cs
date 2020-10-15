@@ -9,6 +9,8 @@ public class Social_D : MonoBehaviour
     public float currentD = 3.5f;
     public float maxD = 3.5f;
     public float multipier;
+    public Image Fill;
+    
 
     [SerializeField]
     public Text level;
@@ -27,15 +29,14 @@ public class Social_D : MonoBehaviour
         if (currentD >= 2.5)
         {
             multipier = 1;
+            Fill.color = Color.green;
         }
-        if (currentD <= 2.4 && currentD >= 1.5)
-        {
-            multipier = 1.5f;
-        }
-        if (currentD < 1.5)
+        if (currentD <= 2.4 )
         {
             multipier = 2;
+            Fill.color = Color.red;
         }
+       
         level.text = currentD + " m";
     }
     public void changeDistance(int dHP)

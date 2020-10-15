@@ -12,12 +12,13 @@ public class dragdrop : MonoBehaviour
     private Vector2 startPosition;
     private GameObject startParent;
     public HealthBarController healthBar;
+    public Action_point AP;
 
     private void Awake()
     {
         canvas = GameObject.Find("Main Canvas");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
-
+        AP = GameObject.Find("Action_points").GetComponent<Action_point>();
     }
 
     // Update is called once per frame
@@ -48,10 +49,11 @@ public class dragdrop : MonoBehaviour
     {
         isDrag = false;
         //if the card is above dropzone
-        if (overzone)
+        if (overzone && AP.get() > 0)
         {
             transform.SetParent(dropzone.transform, false);
             playeffect();
+            AP.reduce();
         }
         else
         {

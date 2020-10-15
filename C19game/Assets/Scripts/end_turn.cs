@@ -214,7 +214,8 @@ public class end_turn : MonoBehaviour
 
         //enable endturn button
         buttn.interactable = true;
-
+        Action_point AP = GameObject.Find("Action_points").GetComponent<Action_point>();
+        AP.reset_points();
     }
 
 }

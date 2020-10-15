@@ -31,6 +31,8 @@ public class end_turn : MonoBehaviour
 
     public GameObject[] cards;
     public HealthBarController healthBar;
+    public Social_D social_D;
+    public ROI_Bar roi;
 
     public int enemyCardNum;
     public int cardIndex;
@@ -158,6 +160,9 @@ public class end_turn : MonoBehaviour
 
         //Finds the Hp bar -------------------------------------------------------------(ROI and SocialDistansce need to still go here
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
+        roi = GameObject.Find("ROI_Bar").GetComponent<ROI_Bar>();
+        social_D = GameObject.Find("Social_D").GetComponent<Social_D>();
+        float multiplier = social_D.multipier; //multiplier on effects (changes depending on distance)
 
         //enemy plays
         //when a specific card is played it affects the system differently

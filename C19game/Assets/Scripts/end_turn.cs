@@ -42,7 +42,7 @@ public class end_turn : MonoBehaviour
     List<GameObject> enemyCardBack = new List<GameObject>();
     void Start()
     {
-        //get player card IDs
+        //set player card IDs
         Mask.name = "Mask";
         Sanitizer.name = "Sanitizer";
         ShoppingCart.name = "Shop";
@@ -57,6 +57,14 @@ public class end_turn : MonoBehaviour
         deck.Add(WashM);
         deck.Add(WashH);
         deck.Add(ShoppingCart);
+
+        //set enemy card ID
+        dirty.name = "dirtyCart";
+        ignorant.name = "Ignorant";
+        itchy.name = "Itchy";
+        unclean.name = "UncleanedSurface";
+        unwashed.name = "unwashedMask";
+        cardBack.name = "cardback";
 
         //adds enemy cards to a deck
         enemyDeck.Add(dirty);

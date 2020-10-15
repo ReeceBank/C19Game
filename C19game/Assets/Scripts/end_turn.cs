@@ -138,13 +138,17 @@ public class end_turn : MonoBehaviour
 
         //disable the player area
         Grey_playerarea.SetActive(true);
-        Grey_enemyarea.SetActive(false);
+        //Grey_enemyarea.SetActive(false);
 
-        yield return new WaitForSeconds(3); // Wait or a number of seconds
+
+        //Waits to display the enemy card for 3 seconds
+        yield return new WaitForSeconds(3);
         
-        // Code after the pause
-        Destroy(zoomCard); // destroy zoomed card
+        //Then destroys said enemy card after its been shown
+        Destroy(zoomCard);
 
+
+        //Finds the Hp bar -------------------------------------------------------------(ROI and SocialDistansce need to still go here
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
 
         //enemy plays
@@ -174,10 +178,12 @@ public class end_turn : MonoBehaviour
             healthBar.changeHealth(-10);
         }
         
-        //detroy card in enemy hand
+        //detroy a card in enemy hand and in their deck, since its been played
         Destroy(enemyCards[enemyCardNum]);
         Destroy(enemyCardBack[enemyCardNum]);
-        //decrement enemy card number
+
+
+        //decrement enemy card number. This determins how many card the enemy plays. is set in the editor slider.
         if (enemyCardNum > 0)
         {
             enemyCardNum--;
@@ -185,7 +191,7 @@ public class end_turn : MonoBehaviour
 
         //enable the playerarea
         Grey_playerarea.SetActive(false);
-        Grey_enemyarea.SetActive(true);
+        //Grey_enemyarea.SetActive(true);
 
         //enable endturn button
         buttn.interactable = true;

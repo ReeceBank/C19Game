@@ -36,4 +36,10 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("MiniGame");
     }
+    public void LoadEndGame()
+    {
+        SceneManager.LoadScene("EndGame");
+    }
+
+
 }

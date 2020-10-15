@@ -9,6 +9,7 @@ public class HealthBarController : MonoBehaviour
     public Slider healthBar;
     public int currentHealth = 30;
     public int maxHealth = 30;
+    public SceneLoader endScene;
 
     [SerializeField]
     public Text value;
@@ -16,7 +17,6 @@ public class HealthBarController : MonoBehaviour
     void Awake()
     {
         healthBar = GetComponent<Slider>();
-        
     }
     void Update()
     {
@@ -36,7 +36,7 @@ public class HealthBarController : MonoBehaviour
         {
             //end game
             currentHealth = 0;
-
+            endScene.LoadEndGame();
             //current end game
         }
         else

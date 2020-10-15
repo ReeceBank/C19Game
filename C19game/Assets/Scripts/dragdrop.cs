@@ -17,6 +17,7 @@ public class dragdrop : MonoBehaviour
     {
         canvas = GameObject.Find("Main Canvas");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
+
     }
 
     // Update is called once per frame

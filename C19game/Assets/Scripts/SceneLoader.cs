@@ -50,4 +50,8 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("QuarantineLevel");
     }
+    public void LoadLevelSelect()
+    {
+        SceneManager.LoadScene("LevelSelect");
+    }
 }

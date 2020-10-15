@@ -1,5 +1,25 @@
 sceneSetups:
+<<<<<<< Updated upstream
 - path: Assets/Scenes/QuarantineLevel.unity
+=======
+- path: Assets/Scenes/MainMenu.unity
+>>>>>>> Stashed changes
   isLoaded: 1
   isActive: 1
+  isSubScene: 0
+- path: Assets/Scenes/EndGame.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/LevelSelect.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/QuarantineLevel.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Leaderboard.unity
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0

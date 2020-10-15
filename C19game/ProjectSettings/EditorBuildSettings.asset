@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndGame.unity
     guid: 91ac3a1e7d0b9f642aaf71e5c0bc09b0
+  - enabled: 1
+    path: Assets/Scenes/LevelSelect.unity
+    guid: 43fae9ba590fed74fa6e97adf70d9485
+  - enabled: 1
+    path: Assets/Scenes/QuarantineLevel.unity
+    guid: fde0ef5242179b044be7dd57525a9091
   m_configObjects: {}

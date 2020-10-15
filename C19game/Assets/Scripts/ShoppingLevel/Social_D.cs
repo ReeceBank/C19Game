@@ -28,16 +28,19 @@ public class Social_D : MonoBehaviour
 
         if (currentD >= 2.5f)
         {
-            multipier = 0.5f;
+            //makes all card have normal level of effects when at more than 2.5m
+            multipier = 1f;
             Fill.color = Color.green;
         }
         else if (currentD < 1.5f )
         {
-            multipier = 2f;
+            //makes all cards have stronger effects when at or below 1.5m, pretty much will get covid if you get to 1.5m
+            multipier = 3f;
             Fill.color = Color.red;
         }
-        else // for when its less than 2.5 but more than 1.5
+        else // for when its less than 2.5 but more than 1.0
         {
+            //makes all cards have normal level of effects when between 2.5 and 1.0
             multipier = 1f;
             Fill.color = Color.yellow;
         }
@@ -50,9 +53,9 @@ public class Social_D : MonoBehaviour
         {
             currentD = 3.5f;
         }
-        else if (currentD + changedD < 1.5f)
+        else if (currentD + changedD < 1.0f)
         {
-            currentD = 1.5f;
+            currentD = 1.0f;
         }
         else
         {
@@ -60,6 +63,10 @@ public class Social_D : MonoBehaviour
         }
 
 
+    }
+    public int multiply(int value)
+    {
+        return (int)(multipier * value);
     }
     public void setD(float changedD)
     {

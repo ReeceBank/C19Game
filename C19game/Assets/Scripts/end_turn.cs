@@ -147,7 +147,7 @@ public class end_turn : MonoBehaviour
         RectTransform rect = zoomCard.GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(600, 900);
 
-        //disable end turn button
+        //disable end turn button during enemy turn
         GameObject endturn = GameObject.Find("EndTurnButton");
         Button buttn = endturn.GetComponent<Button>();
         buttn.interactable = false;
@@ -156,7 +156,8 @@ public class end_turn : MonoBehaviour
         Grey_playerarea.SetActive(true);
         //Grey_enemyarea.SetActive(false);
 
-
+        //destory a card in the hand so it looks like a card is played
+        Destroy(enemyCardBack[enemyCardNum]);
         //Waits to display the enemy card for 3 seconds
         yield return new WaitForSeconds(3);
         
@@ -175,12 +176,11 @@ public class end_turn : MonoBehaviour
         //pass the brain a game object
         aiBrain.playShopEffect(enemyCards[enemyCardNum]);
 
-        //wait for 1 more second so the player can see their changed stats
-        yield return new WaitForSeconds(1);
+        //wait for 0.5 more seconds so the player can see their changed stats
+        yield return new WaitForSeconds(0.5f);
 
         //detroy a card in enemy hand and in their deck, since its been played
         Destroy(enemyCards[enemyCardNum]);
-        Destroy(enemyCardBack[enemyCardNum]);
 
 
         //decrement enemy card number. This determins how many card the enemy plays. is set in the editor slider.
@@ -189,7 +189,7 @@ public class end_turn : MonoBehaviour
             enemyCardNum--;
         }
 
-        //enable the playerarea
+        //enable the playerarea, so player can play cards again
         Debug.Log("enemy turn ended");
         Grey_playerarea.SetActive(false);
         //Grey_enemyarea.SetActive(true);

@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class end_turn : MonoBehaviour
 {
+    //ai brain, what determines what cards do what, for the enemy
+    public AiBrain aiBrain;
     // Player card objects
     public GameObject Mask;
     public GameObject Sanitizer;
@@ -30,6 +32,7 @@ public class end_turn : MonoBehaviour
     public GameObject Grey_enemyarea;
 
     public GameObject[] cards;
+    //all core game sliders
     public HealthBarController healthBar;
     public Social_D social_D;
     public ROI_Bar roi;
@@ -44,6 +47,9 @@ public class end_turn : MonoBehaviour
     List<GameObject> enemyCardBack = new List<GameObject>();
     void Start()
     {
+        //gets the brain script from the brain object
+        aiBrain = GameObject.Find("AiBrain").GetComponent<AiBrain>();
+
         //set player card IDs
         Mask.name = "Mask";
         Sanitizer.name = "Sanitizer";
@@ -166,36 +172,12 @@ public class end_turn : MonoBehaviour
 
         //enemy plays
         //when a specific card is played it affects the system differently
-        if (enemyCards[enemyCardNum].name.Contains("dirtyCart"))
-        {
-            healthBar.changeHealth(-5);
-            roi.changeROI(5);
-        }
+        //pass the brain a game object
+        aiBrain.playShopEffect(enemyCards[enemyCardNum]);
 
-        else if (enemyCards[enemyCardNum].name.Contains("Ignorant"))
-        {
-            healthBar.changeHealth(-5);
-            roi.changeROI(5);
-        }
+        //wait for 1 more second so the player can see their changed stats
+        yield return new WaitForSeconds(1);
 
-        else if (enemyCards[enemyCardNum].name.Contains("Itchy"))
-        {
-            healthBar.changeHealth(-10);
-            roi.changeROI(5);
-        }
-
-        else if (enemyCards[enemyCardNum].name.Contains("UncleanedSurface"))
-        {
-            healthBar.changeHealth(-5);
-            roi.changeROI(5);
-        }
-
-        else if (enemyCards[enemyCardNum].name.Contains("unwashedMask"))
-        {
-            healthBar.changeHealth(-10);
-            roi.changeROI(5);
-        }
-        
         //detroy a card in enemy hand and in their deck, since its been played
         Destroy(enemyCards[enemyCardNum]);
         Destroy(enemyCardBack[enemyCardNum]);

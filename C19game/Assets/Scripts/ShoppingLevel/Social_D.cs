@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Social_D : MonoBehaviour
 {
     public Slider SD;
-    public float currentD = 3.5f;
+    public float currentD = 2.0f;
     public float maxD = 3.5f;
     public float multipier;
     public Image Fill;
@@ -26,47 +26,47 @@ public class Social_D : MonoBehaviour
         SD.value = currentD;
         SD.maxValue = maxD;
 
-        if (currentD >= 2.5)
+        if (currentD >= 2.5f)
         {
-            multipier = 1;
+            multipier = 0.5f;
             Fill.color = Color.green;
         }
-        if (currentD <= 2.4 )
+        else if (currentD < 1.5f )
         {
-            multipier = 2;
+            multipier = 2f;
             Fill.color = Color.red;
+        }
+        else // for when its less than 2.5 but more than 1.5
+        {
+            multipier = 1f;
+            Fill.color = Color.yellow;
         }
        
         level.text = currentD + " m";
     }
-    public void changeDistance(int dHP)
+    public void changeDistance(float changedD)
     {
-        if (currentD + dHP > 30)
+        if (currentD + changedD > 3.5f)
         {
-            currentD = 30;
-            // do hp dmg
-
+            currentD = 3.5f;
         }
-        else if (currentD + dHP < 0)
+        else if (currentD + changedD < 1.5f)
         {
-
-            currentD = 0;
-
-
+            currentD = 1.5f;
         }
         else
         {
-            currentD += dHP;
+            currentD += changedD;
         }
 
 
     }
-    public void setD(int maxHP)
+    public void setD(float changedD)
     {
-        maxD = maxHP;
+        maxD = changedD;
     }
-    public void setcurrentD(int currentHP)
+    public void setcurrentD(float changedD)
     {
-        currentD = currentHP;
+        currentD = changedD;
     }
 }

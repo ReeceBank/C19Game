@@ -32,7 +32,7 @@ public class HealthBarController : MonoBehaviour
         {
             currentHealth = 30;
         }
-        else if (currentHealth + dHP < 0)
+        else if (currentHealth + dHP <= 0)
         {
             //end game
             currentHealth = 0;

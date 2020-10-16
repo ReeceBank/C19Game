@@ -112,6 +112,7 @@ public class end_turn : MonoBehaviour
         Grey_playerarea = GameObject.Find("Grey_playerarea");
         Grey_playerarea.SetActive(false);
 
+        
         //fill enemy hand with cards
         for (var i = 0; i < 4; i++)
         {
@@ -153,7 +154,6 @@ public class end_turn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     IEnumerator Enemy_Play_with_Delay()
@@ -206,7 +206,7 @@ public class end_turn : MonoBehaviour
 
 
         //decrement enemy card number. This determins how many card the enemy plays. is set in the editor slider.
-        if (enemyCardNum > 0)
+        if (enemyCardNum +1 > 0)
         {
             enemyCardNum--;
         }
@@ -227,7 +227,7 @@ public class end_turn : MonoBehaviour
         AP.reset_points();
 
         //win condition 
-        if (enemyCardNum == 0)
+        if (enemyCardNum +1== 0)
         {
             endscene.LoadWin();
         }

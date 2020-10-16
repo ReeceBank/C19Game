@@ -1331,6 +1331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiBrain: {fileID: 0}
+  endscene: {fileID: 990063503}
   Mask: {fileID: 2878779950509762727, guid: d0fa5af256d06cf48bd5db0bf50db599, type: 3}
   Sanitizer: {fileID: 7639948987146079953, guid: cc562c1126f2f204bb8aeff485551d5f,
     type: 3}
@@ -1339,6 +1340,8 @@ MonoBehaviour:
   WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
   ShoppingCart: {fileID: 6505842996289411274, guid: e7b0459bfd7eef246b76db281e5fc8db,
     type: 3}
+  avoid_crowd: {fileID: 0}
+  Bed_apart: {fileID: 0}
   dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
   ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
     type: 3}

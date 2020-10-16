@@ -13,11 +13,20 @@ public class ROI_Bar : MonoBehaviour
     [SerializeField]
     public Text level;
 
+    /*
+     * get and set the ROI slider
+     * get and set the healthbar slider
+     */
     void Awake()
     {
         ROI = GetComponent<Slider>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
     }
+
+    /*
+     * gets current risk of infection value
+     * sets text on slidere based on current value
+     */
     void Update()
     {
 
@@ -38,6 +47,10 @@ public class ROI_Bar : MonoBehaviour
         }
 
     }
+    /*
+     * Determines the current ROI value
+     * affects health bar if value too high
+     */
     public void changeROI(int dHP)
     {
         //when the players risk of infection is at maxiumum, the player takes hp damage when they take more ROI damage
@@ -57,10 +70,18 @@ public class ROI_Bar : MonoBehaviour
 
 
     }
+
+    /*
+     * set maximum risk of infection value
+     */
     public void setMaxROI(int maxHP)
     {
         maxROI = maxHP;
     }
+
+    /*
+     *set current risk of infection value 
+     */
     public void setCurrentROI(int currentHP)
     {
         currentROI = currentHP;

@@ -7,6 +7,10 @@ public class InfoDisplay : MonoBehaviour
 {
     bool active;
     GameObject infotext;
+
+    /*
+     * finds information and makes it invisible 
+     */
     private void Start()
     {
         active = true;
@@ -14,6 +18,9 @@ public class InfoDisplay : MonoBehaviour
         infotext.SetActive(false);
     }
 
+    /*
+     * On click will display/hide information
+     */
     public void InfoClick()
     {
         infotext.SetActive(active);

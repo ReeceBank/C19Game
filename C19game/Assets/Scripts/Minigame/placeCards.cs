@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class placeCards : MonoBehaviour
 {
-    //list of symptom game objects
-
-    //corona symptoms
+    //corona symptoms cards
     public GameObject fever;
     public GameObject fatigue;
     public GameObject cough;
 
-    //fine symptom
+    //fine symptom cards
     public GameObject fine;
 
-    //other symptoms
+    //other symptoms cards
     public GameObject hair;
     public GameObject feet;
     public GameObject thirst;
@@ -26,6 +24,10 @@ public class placeCards : MonoBehaviour
 
     List<GameObject> deck = new List<GameObject>();
 
+    /*
+     * populates a symptom ard deck, randomly displays 3 cards and ...
+     * ...assigns each card a value indicating whether they are a coronavirus symptom card
+     */
     void Awake()
     {
         //add cards to deck
@@ -40,7 +42,6 @@ public class placeCards : MonoBehaviour
         //generate a random card in a card space
         for (var i = 0; i < 1; i++)
         {
-            //get a random card
             int index = Random.Range(0, deck.Count);
 
             //if the index is 0,1 or 2 then its a corona virus symptom
@@ -59,7 +60,7 @@ public class placeCards : MonoBehaviour
                 coronaSymptomatic = true;
             }
 
-            //if the index is any other number then no coronavirus symptomatic
+            //if the index is any other number then not coronavirus symptomatic
             else {
                 coronaSymptomatic = false;
             }
@@ -70,15 +71,4 @@ public class placeCards : MonoBehaviour
 
         }
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    } 
 }

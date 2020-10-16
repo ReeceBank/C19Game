@@ -15,11 +15,19 @@ public class Social_D : MonoBehaviour
     [SerializeField]
     public Text level;
 
+    /*
+     * Gets social distance slider and sets a multiplier value
+     */
     void Awake()
     {
         SD = GetComponent<Slider>();
         multipier = 1f;
     }
+
+    /*
+     * gets the user social distance value an...
+     * ...multiplies card effects accordingly
+     */
     void Update()
     {
 
@@ -47,6 +55,10 @@ public class Social_D : MonoBehaviour
        
         level.text = currentD + " m";
     }
+
+    /*
+     * Changes the social distance value
+     */
     public void changeDistance(float changedD)
     {
         if (currentD + changedD > 3.5f)
@@ -64,14 +76,26 @@ public class Social_D : MonoBehaviour
 
 
     }
+
+    /*
+     * multiplier by which we multiply card effects
+     */
     public int multiply(int value)
     {
         return (int)(multipier * value);
     }
+
+    /*
+     * Sets max distance
+     */
     public void setD(float changedD)
     {
         maxD = changedD;
     }
+
+    /*
+     * sets surrecnt distance
+     */
     public void setcurrentD(float changedD)
     {
         currentD = changedD;

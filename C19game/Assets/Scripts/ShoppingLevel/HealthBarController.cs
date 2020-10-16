@@ -14,10 +14,18 @@ public class HealthBarController : MonoBehaviour
     [SerializeField]
     public Text value;
 
+    /*
+     * gets and sets healthbar
+     */
     void Awake()
     {
         healthBar = GetComponent<Slider>();
     }
+    
+    /*
+     * gets current health and maximum health values
+     * display said values on the slider
+     */
     void Update()
     {
 
@@ -26,6 +34,11 @@ public class HealthBarController : MonoBehaviour
         value.text = currentHealth + " / " + maxHealth;
        
     }
+
+    /*
+     * gets current health value
+     * based on value either sets value, increments value or ends the game
+     */
     public void changeHealth(int dHP)
     {
         if(currentHealth + dHP > 30)
@@ -46,10 +59,17 @@ public class HealthBarController : MonoBehaviour
 
 
     }
+
+    /*
+     * Sets maximum health
+     */
     public void setMaxHealth(int maxHP)
     {
         maxHealth = maxHP;
     }
+    /*
+     * sets current health value
+     */
     public void setCurrentHealth(int currentHP)
     {
         currentHealth = currentHP;

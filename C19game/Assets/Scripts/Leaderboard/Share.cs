@@ -5,29 +5,20 @@ using UnityEngine.UI;
 
 public class Share : MonoBehaviour
 {
-
-    
-
     [SerializeField]
     public Text share_text;
 
-    // Start is called before the first frame update
-    void Awake()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /*
+     * on click we get error message
+     */
     public void click()
     {
         StartCoroutine(Error_message());
     }
 
+    /*
+     *display error message 
+     */
     IEnumerator Error_message()
     {
         share_text.text = "GooglePlay login Failed";

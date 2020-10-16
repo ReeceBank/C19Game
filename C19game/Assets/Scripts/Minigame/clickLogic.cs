@@ -6,18 +6,17 @@ public class clickLogic : MonoBehaviour
 {
     public SceneLoader sceneLoader;
     
-    // Start is called before the first frame update
+    /* 
+     * The start method find the SceneSwitch game object and assigned it to the sceneLoader variable
+     */
     void Start()
     {
         sceneLoader = GameObject.Find("SceneSwitch").GetComponent<SceneLoader>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /*
+     * Determines the whether cars displayed represent a covid symptomatic person
+     */
     public bool GetResult()
     {
         //access the boolean values of each card presented
@@ -39,36 +38,39 @@ public class clickLogic : MonoBehaviour
 
     }
 
-    //determines click logic for each button to half script size
+    /*
+     * When the yes button is clicked, get correctness evauluation
+     * Takes user to game screen if correct and info screen if incorrect
+     */
     public void YesClick()
     {
         if (GetResult()) //calls above function to see if button clicked is Yes
         {
-            Debug.Log("CORRECT!");
-            //ph moves to shop level if correct
+            //moves to shop level if correct
             sceneLoader.LoadOneForward();
         }
         else
         {
-            Debug.Log("WRONG!!!!!!!!");
-            //ph moves to info scene if wrong
+            //moves to info scene if wrong
             sceneLoader.LoadInfoScene();
         }
 
     }
 
-    public void NoClick() //inverse logic for when the button clicked is No
+    /*
+     * When the no button is clicked, get correctness evauluation
+     * Takes user to game screen if correct and info screen if incorrect
+     */
+    public void NoClick()
     {
         if (!GetResult())
         {
-            Debug.Log("CORRECT!");
-            //ph moves to shop level if correct
+            //moves to shop level if correct
             sceneLoader.LoadOneForward();
         }
         else
         {
-            Debug.Log("WRONG!!!!!!!!");
-            //ph moves to info scene if wrong
+            //moves to info scene if wrong
             sceneLoader.LoadInfoScene();
         }
 

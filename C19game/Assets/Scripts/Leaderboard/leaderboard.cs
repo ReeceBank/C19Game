@@ -26,7 +26,7 @@ public class leaderboard : MonoBehaviour
 
         if(PlayerPrefs.GetString("table") == "") // if it doesnt create one
         {
-            //Debug.Log("doesnt creating one");
+
 
             entryList = new List<Entry>()
             {
@@ -46,7 +46,7 @@ public class leaderboard : MonoBehaviour
         }
 
 
-        //sort
+        //sort the scores
         for (int i =0; i < scores.entries.Count; i++)
         {
             for(int j = i + 1; j < scores.entries.Count; j++)
@@ -61,18 +61,26 @@ public class leaderboard : MonoBehaviour
         }
 
 
-        //entryList = scores.entries;
 
+        
+        //show only the top 10 scores    
+        for(int i = 0; i < 10; i++)
+        {
+            CreateTransform(scores.entries[i], entryContainer, transformList);
+        }
+
+        /*
         transformList = new List<Transform>();
-        foreach(Entry entry in scores.entries)
+        foreach(Entry entry in tempList)
         {
             CreateTransform(entry, entryContainer, transformList);
-        }
+        }*/
 
 
 
     }
 
+    //display the scores
     public void CreateTransform(Entry entry, Transform container, List<Transform> list)
     {
         float templateHeight = 60f;
@@ -111,6 +119,7 @@ public class leaderboard : MonoBehaviour
         list.Add(entryTransform);
     }
 
+    //Add a score to the scores list
     public void AddScore(int score, string name)
     {
         Entry entry = new Entry { score = score, name = name };
@@ -125,7 +134,7 @@ public class leaderboard : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-
+    // a entry class
     [System.Serializable]
     public class Entry
     {
@@ -134,11 +143,13 @@ public class leaderboard : MonoBehaviour
 
     }
 
+    // a class to store entries
     public class Scores
     {
         public List<Entry> entries;
     }
 
+    // return a string[] contain the name and score of the highest score
     public string[] get_highscore()
     {
         string[] temp = new string[2];

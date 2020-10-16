@@ -210,5 +210,17 @@ public class leaderboard : MonoBehaviour
         return temp;
     }
 
+    //flushes the scores
+    public void flush()
+    {
+        string jsonString = PlayerPrefs.GetString("table");
+        Scores scores = JsonUtility.FromJson<Scores>(jsonString);
+        scores.entries.Clear();
+        string json = JsonUtility.ToJson(scores);
+        PlayerPrefs.SetString("table", json);
+        PlayerPrefs.Save();
+    }
+
+
 }
 

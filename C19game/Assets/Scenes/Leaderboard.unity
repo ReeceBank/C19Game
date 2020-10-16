@@ -1133,7 +1133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1052883119}
-        m_MethodName: click
+        m_MethodName: shareClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1192,7 +1192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537b2b2d096f99f45a987a9d77058aab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  share_text: {fileID: 443103000}
 --- !u!1 &1207997361
 GameObject:
   m_ObjectHideFlags: 0

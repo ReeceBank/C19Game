@@ -9,6 +9,8 @@ public class end_turn : MonoBehaviour
 {
     //ai brain, what determines what cards do what, for the enemy
     public AiBrain aiBrain;
+    //Sceneloader
+    public SceneLoader endscene;
     // Player card objects
     public GameObject Mask;
     public GameObject Sanitizer;
@@ -215,7 +217,7 @@ public class end_turn : MonoBehaviour
         Score_counter.hp = healthBar.currentHealth;
 
         //enable the playerarea, so player can play cards again
-        Debug.Log("enemy turn ended");
+        //Debug.Log("enemy turn ended");
         Grey_playerarea.SetActive(false);
         //Grey_enemyarea.SetActive(true);
 
@@ -223,6 +225,12 @@ public class end_turn : MonoBehaviour
         buttn.interactable = true;
         Action_point AP = GameObject.Find("Action_points").GetComponent<Action_point>();
         AP.reset_points();
+
+        //win condition 
+        if (enemyCardNum == 0)
+        {
+            endscene.LoadWin();
+        }
     }
 
 }

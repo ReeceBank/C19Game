@@ -11,7 +11,6 @@ public class leaderboard : MonoBehaviour
     public List<Entry> entryList;
     public List<Transform> transformList;
 
-
     public void Awake()
     {
         entryContainer = transform.Find("Container");
@@ -134,13 +133,17 @@ public class leaderboard : MonoBehaviour
         {
             for (int j = i + 1; j < scores.entries.Count; j++)
             {
-                if (scores.entries[j].score > scores.entries[i].score)
+                if (scores.entries[j].score >= scores.entries[i].score)
                 {
                     Entry tmp = scores.entries[i];
                     scores.entries[i] = scores.entries[j];
                     scores.entries[j] = tmp;
                 }
             }
+        }
+        if (scores.entries.Count > 10)
+        {
+            scores.entries.RemoveRange(10, scores.entries.Count - 10);
         }
 
         string json = JsonUtility.ToJson(scores);

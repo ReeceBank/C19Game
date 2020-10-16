@@ -47,7 +47,7 @@ public class clickLogic : MonoBehaviour
         if (GetResult()) //calls above function to see if button clicked is Yes
         {
             //moves to shop level if correct
-            sceneLoader.LoadOneForward();
+            sceneLoader.LoadMorbid();
         }
         else
         {
@@ -66,7 +66,7 @@ public class clickLogic : MonoBehaviour
         if (!GetResult())
         {
             //moves to shop level if correct
-            sceneLoader.LoadOneForward();
+            sceneLoader.LoadMorbid();
         }
         else
         {

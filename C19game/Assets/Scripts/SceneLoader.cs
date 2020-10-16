@@ -68,5 +68,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("AddScore_Scene");
     }
+    public void LoadSchoolLevel()
+    {
+        SceneManager.LoadScene("SchoolLevel");
+    }
 
 }

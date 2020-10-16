@@ -1417,7 +1417,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1259441596}
-        m_MethodName: LoadMiniGame
+        m_MethodName: LoadShopLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1560,7 +1560,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1581324633}
-        m_MethodName: 
+        m_MethodName: LoadSchoolLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

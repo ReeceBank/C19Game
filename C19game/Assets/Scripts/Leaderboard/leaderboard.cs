@@ -129,6 +129,20 @@ public class leaderboard : MonoBehaviour
 
         scores.entries.Add(entry);
 
+        //sort the list
+        for (int i = 0; i < scores.entries.Count; i++)
+        {
+            for (int j = i + 1; j < scores.entries.Count; j++)
+            {
+                if (scores.entries[j].score > scores.entries[i].score)
+                {
+                    Entry tmp = scores.entries[i];
+                    scores.entries[i] = scores.entries[j];
+                    scores.entries[j] = tmp;
+                }
+            }
+        }
+
         string json = JsonUtility.ToJson(scores);
         PlayerPrefs.SetString("table", json);
         PlayerPrefs.Save();

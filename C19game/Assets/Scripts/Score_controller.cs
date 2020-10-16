@@ -3,35 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Score_controller : MonoBehaviour
 {
 
-    public leaderboard lead;
-    public string name ;
+
+    public string input_name ;
     public int score;
     GameObject inputFieldGo;
     InputField inputFieldCo;
-
+    public TextMeshProUGUI score_txt;
+    
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        //set the score value
+        try
+        {
+            score = 999;
+            score_txt = GetComponent<TextMeshProUGUI>();
+            score_txt.text = "" + score;
+        }
+        catch
+        {
+
+        }
+        //get input field
         inputFieldGo = GameObject.Find("Name_field");
         inputFieldCo = inputFieldGo.GetComponent<InputField>();
-        name = inputFieldCo.text.ToString();
+        input_name = inputFieldCo.text.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        name = inputFieldCo.text.ToString();
+        
+        input_name = inputFieldCo.text.ToString();
+        //Debug.Log(input_name);
     }
 
     // add the score to the leaderboard
     // now adds 9999 temp
     public void Add()
     {
-        Save(9999,name);
+        Save(9999, input_name);
         SceneManager.LoadScene("Leaderboard");
     }
 

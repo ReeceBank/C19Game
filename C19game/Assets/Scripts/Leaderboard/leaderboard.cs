@@ -13,10 +13,10 @@ public class leaderboard : MonoBehaviour
 
     public void Awake()
     {
-        entryContainer = transform.Find("Container");
-        entryTemplate = entryContainer.Find("Template");
+            entryContainer = transform.Find("Container");
+            entryTemplate = entryContainer.Find("Template");
 
-        entryTemplate.gameObject.SetActive(false);
+            entryTemplate.gameObject.SetActive(false);
 
 
 

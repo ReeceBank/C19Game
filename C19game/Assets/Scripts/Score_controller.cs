@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Score_controller : MonoBehaviour
 {
@@ -23,7 +24,6 @@ public class Score_controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(inputFieldCo.text);
         name = inputFieldCo.text.ToString();
     }
 
@@ -32,6 +32,7 @@ public class Score_controller : MonoBehaviour
     public void Add()
     {
         Save(9999,name);
+        SceneManager.LoadScene("Leaderboard");
     }
 
     //method to save score

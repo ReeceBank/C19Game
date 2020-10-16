@@ -239,9 +239,7 @@ public class end_turn : MonoBehaviour
         Score_counter.hp = healthBar.currentHealth;
 
         //enable the playerarea, so player can play cards again
-        //Debug.Log("enemy turn ended");
         Grey_playerarea.SetActive(false);
-        //Grey_enemyarea.SetActive(true);
 
         //enable endturn button
         buttn.interactable = true;
@@ -266,8 +264,11 @@ public class end_turn : MonoBehaviour
         HospitalVisit.name = "HospitalVisit";
         PhysicalDistance.name = "PhysicalDistance";
         SoapWash1.name = "SoapWash1";
+
+        //soap2 and soap3 are spawn tokens of soap1 and then soap2 respectivly. its a progressive chain
         SoapWash2.name = "SoapWash2";
         SoapWash3.name = "SoapWash3";
+
         ThinkOfTheChildren.name = "ThinkOfTheChildren";
         WashDryIron.name = "WashDryIron";
 
@@ -280,8 +281,6 @@ public class end_turn : MonoBehaviour
         deck.Add(HospitalVisit);
         deck.Add(PhysicalDistance);
         deck.Add(SoapWash1);
-        deck.Add(SoapWash2);
-        deck.Add(SoapWash3);
         deck.Add(Sanitizer);
         deck.Add(ThinkOfTheChildren);
         deck.Add(WashDryIron);

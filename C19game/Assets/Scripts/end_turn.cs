@@ -11,7 +11,7 @@ public class end_turn : MonoBehaviour
     public AiBrain aiBrain;
     //Sceneloader
     public SceneLoader endscene;
-    // Player card objects
+    // Player general card objects  --------- remove
     public GameObject Mask;
     public GameObject Sanitizer;
     public GameObject Iron;
@@ -20,6 +20,21 @@ public class end_turn : MonoBehaviour
     public GameObject ShoppingCart;
     public GameObject avoid_crowd;
     public GameObject Bed_apart;
+
+    //reeces new cards:
+    public GameObject CallAhead;
+    public GameObject CoveredSneeze;
+    public GameObject DishwashingLiquid;
+    public GameObject FaceMask;
+    public GameObject GoodHygene;
+    public GameObject HandSanitiser;
+    public GameObject HospitalVisit;
+    public GameObject PhysicalDistance;
+    public GameObject SoapWash1;
+    public GameObject SoapWash2;
+    public GameObject SoapWash3;
+    public GameObject ThinkOfTheChildren;
+    public GameObject WashDryIron;
 
     //enemy card objects
     public GameObject dirty;
@@ -67,26 +82,34 @@ public class end_turn : MonoBehaviour
             //add quaratine related cards
             Bed_apart.name = "Bed";
             deck.Add(Bed_apart);
-            
+        }
+        if (scene.name.Contains("SchoolLevel"))
+        {
+
         }
 
 
         //gets the brain script from the brain object
         aiBrain = GameObject.Find("AiBrain").GetComponent<AiBrain>();
 
-        //set player card IDs
+        //set player card IDs --------- remove
         Mask.name = "Mask";
         Sanitizer.name = "Sanitizer";
         WashH.name = "Wash_H";
         WashM.name = "Wash_M";
         Iron.name = "Iron";
 
-        //adds user cards to a deck
+        //set reeces cards:
+        loadupDeckGeneral();
+
+        //adds user cards to a deck ------- remove
         deck.Add(Mask);
         deck.Add(Sanitizer);
         deck.Add(Iron);
         deck.Add(WashM);
         deck.Add(WashH);
+
+        //add reeces cards to the deck
 
         //set enemy card ID
         dirty.name = "dirtyCart";
@@ -106,9 +129,8 @@ public class end_turn : MonoBehaviour
 
         cards = GameObject.FindGameObjectsWithTag("Card");
 
-        //create the grey boxes 
+        //create the grey boxes (which stop the player from draging cards they shouldnt
         Grey_enemyarea = GameObject.Find("Grey_enemyarea");
-
         Grey_playerarea = GameObject.Find("Grey_playerarea");
         Grey_playerarea.SetActive(false);
 
@@ -196,7 +218,7 @@ public class end_turn : MonoBehaviour
         //enemy plays
         //when a specific card is played it affects the system differently
         //pass the brain a game object
-        aiBrain.playShopEffect(enemyCards[enemyCardNum]);
+        aiBrain.playEffect(enemyCards[enemyCardNum]);
 
         //wait for 0.5 more seconds so the player can see their changed stats
         yield return new WaitForSeconds(0.5f);
@@ -231,6 +253,38 @@ public class end_turn : MonoBehaviour
         {
             endscene.LoadWin();
         }
+    }
+    //method to load up the player deck with general cards. You will have to define them in constructors first.
+    public void loadupDeckGeneral()
+    {
+        CallAhead.name = "CallAhead";
+        CoveredSneeze.name = "CoveredSneeze";
+        DishwashingLiquid.name = "DishwashingLiquid";
+        FaceMask.name = "FaceMask";
+        GoodHygene.name = "GoodHygene";
+        HandSanitiser.name = "HandSanitiser";
+        HospitalVisit.name = "HospitalVisit";
+        PhysicalDistance.name = "PhysicalDistance";
+        SoapWash1.name = "SoapWash1";
+        SoapWash2.name = "SoapWash2";
+        SoapWash3.name = "SoapWash3";
+        ThinkOfTheChildren.name = "ThinkOfTheChildren";
+        WashDryIron.name = "WashDryIron";
+
+        deck.Add(CallAhead);
+        deck.Add(CoveredSneeze);
+        deck.Add(DishwashingLiquid);
+        deck.Add(FaceMask);
+        deck.Add(GoodHygene);
+        deck.Add(HandSanitiser);
+        deck.Add(HospitalVisit);
+        deck.Add(PhysicalDistance);
+        deck.Add(SoapWash1);
+        deck.Add(SoapWash2);
+        deck.Add(SoapWash3);
+        deck.Add(Sanitizer);
+        deck.Add(ThinkOfTheChildren);
+        deck.Add(WashDryIron);
     }
 
 }

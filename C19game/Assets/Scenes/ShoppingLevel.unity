@@ -1342,6 +1342,32 @@ MonoBehaviour:
     type: 3}
   avoid_crowd: {fileID: 0}
   Bed_apart: {fileID: 0}
+  CallAhead: {fileID: 8573294053774912672, guid: 02c954b8eb26eee4483ec9743e48c0f4,
+    type: 3}
+  CoveredSneeze: {fileID: 1017851376124811441, guid: e8fd9cbbbf8a53244b20e2c95fafabe5,
+    type: 3}
+  DishwashingLiquid: {fileID: 1581856184131353881, guid: 632bcb51cd2c0464da71c9a67379fa6f,
+    type: 3}
+  FaceMask: {fileID: 7253872380522235376, guid: e36e45d2d49ce58428c48460d12bd286,
+    type: 3}
+  GoodHygene: {fileID: 7827185005501716894, guid: b3e14bf1c40727848addab43b5d118cc,
+    type: 3}
+  HandSanitiser: {fileID: 5661752740655891587, guid: d5d00c90de4dd494198a02dedc2aace4,
+    type: 3}
+  HospitalVisit: {fileID: 355211676568526507, guid: 289d1bfdc12435e47bb179e462c0cea2,
+    type: 3}
+  PhysicalDistance: {fileID: 7831223214754029500, guid: 676bcfd315aa3b2429a748ef4766788e,
+    type: 3}
+  SoapWash1: {fileID: 3907084966036249424, guid: 701bab1ddb089e140a207a2fc7c49402,
+    type: 3}
+  SoapWash2: {fileID: 8219586525297062025, guid: bbbd1cfcd71b727488c9dd060330b11c,
+    type: 3}
+  SoapWash3: {fileID: 8219586525297062025, guid: bbbd1cfcd71b727488c9dd060330b11c,
+    type: 3}
+  ThinkOfTheChildren: {fileID: 5444799323930074702, guid: 32d3e8e2dff1231409ae8d141caad849,
+    type: 3}
+  WashDryIron: {fileID: 1968398894586401761, guid: af89066cdff3c9e4994cc0baac432990,
+    type: 3}
   dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
   ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
     type: 3}

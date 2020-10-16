@@ -19,7 +19,7 @@ public class AiBrain : MonoBehaviour
 
     
     //this method takes a game object. is meant to be used in the shopping level
-    public void playShopEffect(GameObject gameObject)
+    public void playEffect(GameObject gameObject)
     {
         if (gameObject.name.Contains("dirtyCart"))
         {

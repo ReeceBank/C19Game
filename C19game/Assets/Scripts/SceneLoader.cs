@@ -41,6 +41,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("EndGame");
     }
 
+    public void LoadWin()
+    {
+        SceneManager.LoadScene("WinScene");
+    }
+
     public void LoadShopLevel()
     {
         SceneManager.LoadScene("ShoppingLevel");

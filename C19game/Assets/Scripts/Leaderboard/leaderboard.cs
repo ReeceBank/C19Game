@@ -24,8 +24,6 @@ public class leaderboard : MonoBehaviour
 
         if(PlayerPrefs.GetString("table") == "") // if it doesnt create one
         {
-
-
             entryList = new List<Entry>()
             {
             new Entry{score = 0, name = "---"},
@@ -58,23 +56,11 @@ public class leaderboard : MonoBehaviour
             }
         }
 
-
-
-        
-        //show only the top 10 scores    
-        for(int i = 0; i < 10; i++)
+        //show the scores
+        for(int i = 0; i < scores.entries.Count; i++)
         {
             CreateTransform(scores.entries[i], entryContainer, transformList);
         }
-
-        /*
-        transformList = new List<Transform>();
-        foreach(Entry entry in tempList)
-        {
-            CreateTransform(entry, entryContainer, transformList);
-        }*/
-
-
 
     }
 

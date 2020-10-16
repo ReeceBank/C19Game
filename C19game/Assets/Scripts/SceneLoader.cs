@@ -58,4 +58,10 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene("Morbidities");
     }
+
+    public void LoadScore()
+    {
+        SceneManager.LoadScene("AddScore_Scene");
+    }
+
 }

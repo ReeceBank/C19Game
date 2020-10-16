@@ -92,7 +92,7 @@ public class dragdrop : MonoBehaviour
         {
             healthBar.changeHealth(+5);
         }
-
+        Score_counter.card_score += 10;
         Destroy(gameObject);
     }
 

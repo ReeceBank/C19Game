@@ -21,7 +21,9 @@ public class Score_controller : MonoBehaviour
         //set the score value
         try
         {
-            score = 999;
+            score = 0;
+            float temp = (Score_counter.card_score + Score_counter.hp * 100 + Score_counter.ROI * 50 + Score_counter.dist * 100) * Score_counter.diff_multi ;
+            score = (int)temp;
             score_txt = GetComponent<TextMeshProUGUI>();
             score_txt.text = "" + score;
         }
@@ -47,7 +49,7 @@ public class Score_controller : MonoBehaviour
     // now adds 9999 temp
     public void Add()
     {
-        Save(9999, input_name);
+        Save(score, input_name);
         SceneManager.LoadScene("Leaderboard");
     }
 

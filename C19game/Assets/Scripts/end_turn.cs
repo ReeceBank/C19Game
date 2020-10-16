@@ -209,6 +209,11 @@ public class end_turn : MonoBehaviour
             enemyCardNum--;
         }
 
+        Score_counter.card_score += 20;
+        Score_counter.dist = social_D.currentD;
+        Score_counter.ROI = roi.currentROI;
+        Score_counter.hp = healthBar.currentHealth;
+
         //enable the playerarea, so player can play cards again
         Debug.Log("enemy turn ended");
         Grey_playerarea.SetActive(false);

@@ -20,6 +20,19 @@ public class HealthBarController : MonoBehaviour
     void Awake()
     {
         healthBar = GetComponent<Slider>();
+        if(Difficulty.difficulty == 1)
+        {
+            currentHealth = 30;
+        }
+        if (Difficulty.difficulty == 2)
+        {
+            currentHealth = 30;
+        }
+        if (Difficulty.difficulty == 3)
+        {
+            currentHealth = 15;
+            maxHealth = 15;
+        }
     }
     
     /*
@@ -41,9 +54,9 @@ public class HealthBarController : MonoBehaviour
      */
     public void changeHealth(int dHP)
     {
-        if(currentHealth + dHP > 30)
+        if(currentHealth + dHP > maxHealth)
         {
-            currentHealth = 30;
+            currentHealth = maxHealth;
         }
         else if (currentHealth + dHP <= 0)
         {

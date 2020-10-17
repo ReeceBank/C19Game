@@ -21,6 +21,22 @@ public class ROI_Bar : MonoBehaviour
     {
         ROI = GetComponent<Slider>();
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
+
+        if(Difficulty.difficulty == 1)
+        {
+            currentROI = 0;
+            maxROI = 30;
+        }
+        if (Difficulty.difficulty == 2)
+        {
+            currentROI = 15;
+            maxROI = 30;
+        }
+        if (Difficulty.difficulty == 3)
+        {
+            currentROI = 15;
+            maxROI = 30;
+        }
     }
 
     /*
@@ -54,9 +70,9 @@ public class ROI_Bar : MonoBehaviour
     public void changeROI(int dHP)
     {
         //when the players risk of infection is at maxiumum, the player takes hp damage when they take more ROI damage
-        if (currentROI + dHP > 30)
+        if (currentROI + dHP > maxROI)
         {
-            currentROI = 30;
+            currentROI = maxROI;
             healthBar.changeHealth(-10);
         }
         else if (currentROI + dHP < 0)

@@ -87,7 +87,19 @@ public class end_turn : MonoBehaviour
 
     List<GameObject> enemyCards = new List<GameObject>();
     List<GameObject> enemyCardBack = new List<GameObject>();
-
+    private void Update()
+    {
+        if(SoapProgress.soap1Played == true)
+        {
+            SoapProgress.soap1Played = false;
+            addSoap2();
+        }
+        if (SoapProgress.soap2Played == true)
+        {
+            SoapProgress.soap2Played = false;
+            addSoap3();
+        }
+    }
     /*
      * Deals enemy and user cards on start
      */
@@ -338,6 +350,16 @@ public class end_turn : MonoBehaviour
         deck.Add(SoapWash1);
         deck.Add(ThinkOfTheChildren);
         deck.Add(WashDryIron);
+    }
+    public void addSoap2()
+    {
+        GameObject playerCard = Instantiate(SoapWash2, new Vector3(0, 0, 0), Quaternion.identity);
+        playerCard.transform.SetParent(PlayerArea.transform, false);
+    }
+    public void addSoap3()
+    {
+        GameObject playerCard = Instantiate(SoapWash3, new Vector3(0, 0, 0), Quaternion.identity);
+        playerCard.transform.SetParent(PlayerArea.transform, false);
     }
 
 }

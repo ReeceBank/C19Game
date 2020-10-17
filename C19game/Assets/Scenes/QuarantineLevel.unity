@@ -454,7 +454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23, y: 81.39505}
+  m_AnchoredPosition: {x: -23.00003, y: 81.39508}
   m_SizeDelta: {x: -385.09192, y: -719.1138}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73819393
@@ -2660,24 +2660,29 @@ PrefabInstance:
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.5566038
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.5566038
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.5566038
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c68cdba77dea879449aff133c587fd93,
+      objectReference: {fileID: 21300000, guid: 8015767d6edd5c640aae33219f76a5be,
         type: 3}
+    - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694399, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2909,7 +2914,7 @@ MonoBehaviour:
     type: 3}
   UncleanSurface: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
     type: 3}
-  UnderlyingConditions: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
+  UnderlyingConditions: {fileID: 7683203457218057260, guid: d714ba296b29e5c458e8993145ac5584,
     type: 3}
   cardBack: {fileID: 4680588311600549706, guid: d9fc7103baf1d2c4cbf753b99b1e2dc7,
     type: 3}

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class dragdrop : MonoBehaviour
 {
+    //private  endTurn;
     private GameObject canvas;
     private bool isDrag = false;
     private bool overzone = false;
@@ -16,11 +17,13 @@ public class dragdrop : MonoBehaviour
     public ROI_Bar roi;
     public Action_point AP;
 
+
     /*
      * gets and sets infection slider, risk of infection slider, social distance slider and action points
      */
     private void Awake()
     {
+        //endTurn = GameObject.Find("EndTurnButton").GetComponent<end_turn>;
         canvas = GameObject.Find("Main Canvas");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
         roi = GameObject.Find("SliderROI").GetComponent<ROI_Bar>();
@@ -77,6 +80,7 @@ public class dragdrop : MonoBehaviour
     /*
     * code the effects of cards played
     */
+    //these are the general player cards. these cards can have synergy
     public void playeffect()
     {
         if (gameObject.name.Contains("CallAhead"))
@@ -85,23 +89,69 @@ public class dragdrop : MonoBehaviour
         }
         else if (gameObject.name.Contains("CoveredSneeze"))
         {
+            //unclean hands
+            if (BuffEffects.cleanHands == true) // your hands are now filthy since you sneezed and need to wash.
+            {
+                BuffEffects.cleanHands = false;
+            }
+            //covered sneeze
+            if (BuffEffects.coveredSneeze == false) //covered sneeze toggle to make synergy
+            {
+                BuffEffects.coveredSneeze = true;
+            }
             roi.changeROI(-10);
             social_D.changeDistance(+0.5f);
         }
         else if(gameObject.name.Contains("DishwashingLiquid"))
         {
+            //cleans hands
+            if(BuffEffects.cleanHands == false)
+            {
+                BuffEffects.cleanHands = true;
+            }
+
+            //synergy with coveredsneeze cards
+            if (BuffEffects.coveredSneeze == true) //covered sneeze synergises with handwashing
+            {
+                roi.changeROI(-5);
+            }
             roi.changeROI(-5);
         }
         else if (gameObject.name.Contains("FaceMask"))
         {
+            if (BuffEffects.faceMask == false)
+            {
+                BuffEffects.faceMask = true;
+            }
             roi.changeROI(-10);
         }
         else if (gameObject.name.Contains("GoodHygene"))
         {
+            //cleans hands
+            if (BuffEffects.cleanHands == false)
+            {
+                BuffEffects.cleanHands = true;
+            }
+
+            //synergy with coveredsneeze cards
+            if (BuffEffects.coveredSneeze == true) //covered sneeze synergises with handwashing
+            {
+                roi.changeROI(-5);
+            }
             roi.changeROI(-5);
         }
         else if (gameObject.name.Contains("HandSanitiser"))
         {
+            //cleans hands
+            if (BuffEffects.cleanHands == false)
+            {
+                BuffEffects.cleanHands = true;
+            }
+            //synergy with coveredsneeze cards
+            if (BuffEffects.coveredSneeze == true) //covered sneeze synergises with handwashing
+            {
+                roi.changeROI(-5);
+            }
             roi.changeROI(-10);
         }
         else if (gameObject.name.Contains("HospitalVisit"))
@@ -115,15 +165,15 @@ public class dragdrop : MonoBehaviour
         }
         else if (gameObject.name.Contains("SoapWash1"))
         {
-            
+            SoapProgress.soap1Played = true;
         }
         else if (gameObject.name.Contains("SoapWash2"))
         {
-            
+            SoapProgress.soap2Played = true;
         }
         else if (gameObject.name.Contains("SoapWash3"))
         {
-            roi.changeROI(-15);
+            roi.changeROI(-25);
         }
         else if (gameObject.name.Contains("ThinkOfTheChildren"))
         {
@@ -132,15 +182,23 @@ public class dragdrop : MonoBehaviour
         }
         else if (gameObject.name.Contains("WashDryIron"))
         {
-            
+
+            if (BuffEffects.faceMask)
+            {
+                healthBar.changeHealth(+10);
+                roi.changeROI(-5);
+                BuffEffects.faceMask = false;
+            }
         }
-        
+
+        //these are the level specific uniques, they dont have synergy
         switch (gameObject.name.Substring(0,gameObject.name.Length - 7))
         {
             case "Shop":
                 social_D.changeDistance(+1);
                 break;
-            case "WipeDown":
+            case "WipeDown": //wipedown is *techinically* a hand wash so i made it clean hands just for fun hidden synergy
+                if(BuffEffects.cleanHands == false) { BuffEffects.cleanHands = true; }
                 roi.changeROI(-10);
                 break;
             case "GoodVentilation":
@@ -164,11 +222,10 @@ public class dragdrop : MonoBehaviour
                 break;
             case "SleepApart":
                 roi.changeROI(-5);
-                social_D.changeDistance(+0.5f);
+                social_D.changeDistance(+1f);
                 break;
-            case "WhenToWorry":
-                roi.changeROI(-5);
-                
+            case "WhenToWorry": //this card is actually a bad card that can fill you hand. adds variety.
+                roi.changeROI(5);
                 break;
             case "AvoidCrowds":
                 roi.changeROI(-5);

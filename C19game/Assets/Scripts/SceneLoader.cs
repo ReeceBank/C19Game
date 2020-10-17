@@ -125,4 +125,11 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("SchoolLevel");
     }
 
+    /*
+     * Loads the tutorial scene
+     */
+    public void LoadTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }

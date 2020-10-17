@@ -165,11 +165,11 @@ public class dragdrop : MonoBehaviour
         }
         else if (gameObject.name.Contains("SoapWash1"))
         {
-            //needs to add soap2 to hand
+            SoapProgress.soap1Played = true;
         }
         else if (gameObject.name.Contains("SoapWash2"))
         {
-            //needs to add soap3 to hand
+            SoapProgress.soap2Played = true;
         }
         else if (gameObject.name.Contains("SoapWash3"))
         {

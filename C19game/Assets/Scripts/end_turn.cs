@@ -87,7 +87,19 @@ public class end_turn : MonoBehaviour
 
     List<GameObject> enemyCards = new List<GameObject>();
     List<GameObject> enemyCardBack = new List<GameObject>();
-
+    private void Update()
+    {
+        if(SoapProgress.soap1Played == true)
+        {
+            SoapProgress.soap1Played = false;
+            addSoap2();
+        }
+        if (SoapProgress.soap2Played == true)
+        {
+            SoapProgress.soap2Played = false;
+            addSoap3();
+        }
+    }
     /*
      * Deals enemy and user cards on start
      */

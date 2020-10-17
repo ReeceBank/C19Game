@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8334202373661021931}
   - component: {fileID: 8334202373661021929}
   - component: {fileID: 8334202373661021928}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,9 +144,9 @@ GameObject:
   - component: {fileID: 8334202374000630767}
   - component: {fileID: 8334202374000630765}
   - component: {fileID: 8334202374000630764}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fine
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 8334202374092408827}
   - component: {fileID: 8334202374092408825}
   - component: {fileID: 8334202374092408824}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 8334202375541908428}
   - component: {fileID: 8334202375541908426}
   - component: {fileID: 8334202375541908429}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4404466919025462097}
   - component: {fileID: 4404466919025462103}
   - component: {fileID: 4404466919025462096}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SmellyFeet
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4404466919291572346}
   - component: {fileID: 4404466919291572344}
   - component: {fileID: 4404466919291572345}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 4404466919526859910}
   - component: {fileID: 4404466919526859908}
   - component: {fileID: 4404466919526859909}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 4404466919865484720}
   - component: {fileID: 4404466919865484726}
   - component: {fileID: 4404466919865484727}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}

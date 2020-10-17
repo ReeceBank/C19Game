@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7102102439206003491}
   - component: {fileID: 4570479367023501218}
   - component: {fileID: 1911515459175539955}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 5101590160439974258}
   - component: {fileID: 4208640770991078504}
   - component: {fileID: 7702602687431034727}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 1840483146926555746}
   - component: {fileID: 6351926069992824155}
   - component: {fileID: 5503203373583264673}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   - component: {fileID: 8095453158102978973}
   - component: {fileID: 8493895554192954597}
   - component: {fileID: 7296775727195054660}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 1997592459624721590}
   - component: {fileID: 5754962311151247764}
   - component: {fileID: 1708685703486990033}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IMAGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 9012242924867493164}
   - component: {fileID: 3143879137775635620}
   - component: {fileID: 1448323441190221368}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: StrangeFever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +658,7 @@ GameObject:
   - component: {fileID: 8197206537301089864}
   - component: {fileID: 2026069447582453176}
   - component: {fileID: 2526891027050854049}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 7152945762503239229}
   - component: {fileID: 8881475799743733469}
   - component: {fileID: 2071739443967889394}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 2959957963783407005}
   - component: {fileID: 7395269608443488614}
   - component: {fileID: 788955621803250510}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,7 +883,7 @@ GameObject:
   - component: {fileID: 8722749800652052990}
   - component: {fileID: 4011617245273016496}
   - component: {fileID: 935926436614623679}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: NAM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1016,7 +1016,7 @@ GameObject:
   - component: {fileID: 9216303884317432678}
   - component: {fileID: 4781811139510908328}
   - component: {fileID: 7528991509287691316}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DESC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1150,7 +1150,7 @@ GameObject:
   - component: {fileID: 1712879437107847415}
   - component: {fileID: 5487231116337432796}
   - component: {fileID: 6741475412563698976}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,7 +1283,7 @@ GameObject:
   - component: {fileID: 2703646424900207474}
   - component: {fileID: 2627924406087167676}
   - component: {fileID: 3453810620895403644}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6662158630471504066}
   - component: {fileID: 6662158630471504064}
   - component: {fileID: 6662158630471504065}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6662158630638339134}
   - component: {fileID: 6662158630638339132}
   - component: {fileID: 6662158630638339133}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 6662158630970803464}
   - component: {fileID: 6662158630970803470}
   - component: {fileID: 6662158630970803471}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,9 +351,9 @@ GameObject:
   - component: {fileID: 6662158632351894505}
   - component: {fileID: 6662158632351894511}
   - component: {fileID: 6662158632351894504}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fever
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4766669377958209011}
   - component: {fileID: 3457291223903352323}
   - component: {fileID: 1222055914404957466}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: res
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 2908217752803546893}
   - component: {fileID: 8951314216163695151}
   - component: {fileID: 2617356614630923626}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IMAGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,9 +161,14 @@ GameObject:
   - component: {fileID: 5689493637029176983}
   - component: {fileID: 1748947011162994463}
   - component: {fileID: 2881658478864797059}
-  m_Layer: 5
+  - component: {fileID: 7145961014609845810}
+  - component: {fileID: -2881806274787557769}
+  - component: {fileID: 6514130465227587573}
+  - component: {fileID: 9189028938361686146}
+  - component: {fileID: 3225345941211767894}
+  m_Layer: 8
   m_Name: PositiveEnergy
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +253,169 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7145961014609845810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080135184660126871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cccd36b494b656e4c8433dbd91e63ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
+  AP: {fileID: 0}
+--- !u!114 &-2881806274787557769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080135184660126871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da67d72be508b24bb4f62941d4498a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
+--- !u!114 &6514130465227587573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080135184660126871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8139144249561599383, guid: d6de3f913d8c0084586897716774e51a,
+            type: 3}
+          m_MethodName: startDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 5785640807889439706, guid: d6de3f913d8c0084586897716774e51a,
+            type: 3}
+          m_MethodName: OnholdExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8139144249561599383, guid: d6de3f913d8c0084586897716774e51a,
+            type: 3}
+          m_MethodName: endDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5785640807889439706, guid: d6de3f913d8c0084586897716774e51a,
+            type: 3}
+          m_MethodName: OnholdEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 5785640807889439706, guid: d6de3f913d8c0084586897716774e51a,
+            type: 3}
+          m_MethodName: OnholdExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!50 &9189028938361686146
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080135184660126871}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 7
+--- !u!61 &3225345941211767894
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080135184660126871}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 200, y: 300}
+  m_EdgeRadius: 0
 --- !u!1 &3166457100004920210
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +427,7 @@ GameObject:
   - component: {fileID: 3057516208776526297}
   - component: {fileID: 7764870387498624736}
   - component: {fileID: 9204092301344788506}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +560,7 @@ GameObject:
   - component: {fileID: 4880807570156284454}
   - component: {fileID: 5045349211618013022}
   - component: {fileID: 6244124044361095679}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: dis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +635,7 @@ GameObject:
   - component: {fileID: 5866910394143348888}
   - component: {fileID: 903347370375848985}
   - component: {fileID: 2982471812663369544}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -600,7 +768,7 @@ GameObject:
   - component: {fileID: 8442193600353018569}
   - component: {fileID: 688161353954691027}
   - component: {fileID: 6413665956730698972}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +901,7 @@ GameObject:
   - component: {fileID: 1612719091961280713}
   - component: {fileID: 1701388912424817927}
   - component: {fileID: 2020613288597398983}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +982,7 @@ GameObject:
   - component: {fileID: 2603522196166630220}
   - component: {fileID: 9205991789553152871}
   - component: {fileID: 7956250075382587035}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +1115,7 @@ GameObject:
   - component: {fileID: 5809803105312513414}
   - component: {fileID: 5234757604412826982}
   - component: {fileID: 3396984524669072457}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: inf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1190,7 @@ GameObject:
   - component: {fileID: 1943071742652005926}
   - component: {fileID: 6144468894149841629}
   - component: {fileID: 4113512230691563765}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1097,7 +1265,7 @@ GameObject:
   - component: {fileID: 5476989489403535581}
   - component: {fileID: 8194484807245532691}
   - component: {fileID: 6600190740221878159}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DESC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1231,7 +1399,7 @@ GameObject:
   - component: {fileID: 5398023594120880709}
   - component: {fileID: 308760183124620043}
   - component: {fileID: 4546906382887479812}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: NAM
   m_TagString: Untagged
   m_Icon: {fileID: 0}

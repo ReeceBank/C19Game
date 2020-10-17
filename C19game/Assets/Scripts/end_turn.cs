@@ -75,7 +75,7 @@ public class end_turn : MonoBehaviour
         {
             //add shopping related cards
             ShoppingCart.name = "Shop";
-            deck.Add(ShoppingCart);
+            //deck.Add(ShoppingCart);
         }
         if (scene.name.Contains("QuarantineLevel"))
         {
@@ -103,12 +103,13 @@ public class end_turn : MonoBehaviour
         loadupDeckGeneral();
 
         //adds user cards to a deck ------- remove
+        /*
         deck.Add(Mask);
         deck.Add(Sanitizer);
         deck.Add(Iron);
         deck.Add(WashM);
         deck.Add(WashH);
-
+        */
         //add reeces cards to the deck
 
         //set enemy card ID
@@ -120,12 +121,13 @@ public class end_turn : MonoBehaviour
         cardBack.name = "cardback";
 
         //adds enemy cards to a deck
+        
         enemyDeck.Add(dirty);
         enemyDeck.Add(ignorant); 
         enemyDeck.Add(itchy); 
         enemyDeck.Add(unclean); 
         enemyDeck.Add(unwashed);
-
+        
 
         cards = GameObject.FindGameObjectsWithTag("Card");
 
@@ -272,7 +274,7 @@ public class end_turn : MonoBehaviour
         ThinkOfTheChildren.name = "ThinkOfTheChildren";
         WashDryIron.name = "WashDryIron";
 
-        deck.Add(CallAhead);
+        deck.Add(CallAhead);        
         deck.Add(CoveredSneeze);
         deck.Add(DishwashingLiquid);
         deck.Add(FaceMask);

@@ -4,15 +4,42 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
+  - aiBrain: {instanceID: 0}
+  - endscene: {instanceID: 0}
   - Mask: {instanceID: 0}
   - Sanitizer: {instanceID: 0}
   - Iron: {instanceID: 0}
   - WashM: {instanceID: 0}
   - WashH: {instanceID: 0}
   - ShoppingCart: {instanceID: 0}
+  - avoid_crowd: {instanceID: 0}
+  - Bed_apart: {instanceID: 0}
+  - CallAhead: {instanceID: 0}
+  - CoveredSneeze: {instanceID: 0}
+  - DishwashingLiquid: {instanceID: 0}
+  - FaceMask: {instanceID: 0}
+  - GoodHygene: {instanceID: 0}
+  - HandSanitiser: {instanceID: 0}
+  - HospitalVisit: {instanceID: 0}
+  - PhysicalDistance: {instanceID: 0}
+  - SoapWash1: {instanceID: 0}
+  - SoapWash2: {instanceID: 0}
+  - SoapWash3: {instanceID: 0}
+  - ThinkOfTheChildren: {instanceID: 0}
+  - WashDryIron: {instanceID: 0}
+  - dirty: {instanceID: 0}
+  - ignorant: {instanceID: 0}
+  - itchy: {instanceID: 0}
+  - unclean: {instanceID: 0}
+  - unwashed: {instanceID: 0}
+  - cardBack: {instanceID: 0}
   - PlayerArea: {instanceID: 0}
   - EnemyArea: {instanceID: 0}
+  - Grey_playerarea: {instanceID: 0}
+  - Grey_enemyarea: {instanceID: 0}
   - healthBar: {instanceID: 0}
+  - social_D: {instanceID: 0}
+  - roi: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

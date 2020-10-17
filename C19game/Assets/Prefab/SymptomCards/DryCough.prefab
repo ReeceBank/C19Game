@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3630613285508313570}
   - component: {fileID: 3630613285508313572}
   - component: {fileID: 3630613285508313571}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DryCough
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 3630613286279134979}
   - component: {fileID: 3630613286279134981}
   - component: {fileID: 3630613286279134980}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 3630613286852291273}
   - component: {fileID: 3630613286852291275}
   - component: {fileID: 3630613286852291274}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   - component: {fileID: 3630613287020412469}
   - component: {fileID: 3630613287020412471}
   - component: {fileID: 3630613287020412470}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}

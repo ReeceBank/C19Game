@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6010202527918977209}
   - component: {fileID: 6010202527918977215}
   - component: {fileID: 6010202527918977214}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 6010202528242921871}
   - component: {fileID: 6010202528242921869}
   - component: {fileID: 6010202528242921868}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 6010202528478406003}
   - component: {fileID: 6010202528478406001}
   - component: {fileID: 6010202528478406000}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,9 +352,9 @@ GameObject:
   - component: {fileID: 6010202528748256856}
   - component: {fileID: 6010202528748256862}
   - component: {fileID: 6010202528748256857}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Fatigue
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

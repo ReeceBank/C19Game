@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2237268713760575834}
   - component: {fileID: 2237268713760575828}
   - component: {fileID: 2237268713760575829}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: HairLoss
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2237268713983402316}
   - component: {fileID: 2237268713983402318}
   - component: {fileID: 2237268713983402319}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 2237268714891536696}
   - component: {fileID: 2237268714891536698}
   - component: {fileID: 2237268714891536699}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: SymptomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 2237268715182390658}
   - component: {fileID: 2237268715182390716}
   - component: {fileID: 2237268715182390717}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}

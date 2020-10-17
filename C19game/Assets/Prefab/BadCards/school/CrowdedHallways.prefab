@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3828016681919571004}
   - component: {fileID: 8916730304995538290}
   - component: {fileID: 4679137190685682813}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: NAM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 3743711559317677732}
   - component: {fileID: 1030991970331379818}
   - component: {fileID: 2625299216295664118}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DESC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 7278191160769280095}
   - component: {fileID: 3077067813440476324}
   - component: {fileID: 5107179474291338892}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: MANA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 3411168977350056959}
   - component: {fileID: 3986777993964446495}
   - component: {fileID: 5823992512275247664}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: inf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 6618013937034992949}
   - component: {fileID: 14700443849405726}
   - component: {fileID: 1268957854485698786}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   - component: {fileID: 7608829647069052592}
   - component: {fileID: 7524095557435642750}
   - component: {fileID: 7204862393826763710}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 783287006083638448}
   - component: {fileID: 8537327508482834858}
   - component: {fileID: 2807873477122964133}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 3358852799703244513}
   - component: {fileID: 8322419692058468960}
   - component: {fileID: 6239076991736158513}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 4344396494143925343}
   - component: {fileID: 4175636579607161127}
   - component: {fileID: 2977420881779433350}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: dis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 6167684030952832928}
   - component: {fileID: 1455829545702351001}
   - component: {fileID: 21946350291981923}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1118,7 +1118,7 @@ GameObject:
   - component: {fileID: 3531769240659779822}
   - component: {fileID: 7472592400172233062}
   - component: {fileID: 6344388965615782906}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: CrowdedHallways
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1216,7 +1216,7 @@ GameObject:
   - component: {fileID: 6316977543350210932}
   - component: {fileID: 274453368343239766}
   - component: {fileID: 6603630283454225171}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: IMAGE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1290,7 +1290,7 @@ GameObject:
   - component: {fileID: 4454312589542499210}
   - component: {fileID: 5768193257766973562}
   - component: {fileID: 7999488435000740707}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: res
   m_TagString: Untagged
   m_Icon: {fileID: 0}

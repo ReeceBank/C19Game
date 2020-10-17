@@ -1195,17 +1195,17 @@ PrefabInstance:
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
@@ -1217,6 +1217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Type
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3527001824957694398, guid: 3939feeb113557f41aac490c555c1516,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.94509804
       objectReference: {fileID: 0}
     - target: {fileID: 3527001824957694399, guid: 3939feeb113557f41aac490c555c1516,
         type: 3}
@@ -2318,7 +2323,7 @@ MonoBehaviour:
     type: 3}
   UncleanSurface: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
     type: 3}
-  UnderlyingConditions: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
+  UnderlyingConditions: {fileID: 7683203457218057260, guid: d714ba296b29e5c458e8993145ac5584,
     type: 3}
   cardBack: {fileID: 4680588311600549706, guid: d9fc7103baf1d2c4cbf753b99b1e2dc7,
     type: 3}

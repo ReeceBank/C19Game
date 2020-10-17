@@ -177,7 +177,6 @@ public class dragdrop : MonoBehaviour
         }
         else if (gameObject.name.Contains("ThinkOfTheChildren"))
         {
-            healthBar.changeHealth(+5);
             roi.changeROI(-5);
             social_D.changeDistance(+0.5f);
         }

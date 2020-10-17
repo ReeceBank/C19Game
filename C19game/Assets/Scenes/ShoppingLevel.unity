@@ -274,7 +274,7 @@ RectTransform:
   m_Children:
   - {fileID: 1708186268}
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -333,49 +333,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84981927}
   m_CullTransparentMesh: 0
---- !u!1 &119762482
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 119762483}
-  - component: {fileID: 119762484}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &119762483
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119762482}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -140.89804, y: 34.665257, z: -394.0278}
-  m_LocalScale: {x: 1.1111112, y: 1.1111112, z: 1.1111112}
-  m_Children: []
-  m_Father: {fileID: 1034499185}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &119762484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 119762482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 193f481170a6177498459e77d7f6dd19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &453864160 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2792575906578103486, guid: 68cdd7fca8537cb478f9de4e5cde287a,
@@ -631,7 +588,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1338,15 +1295,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aiBrain: {fileID: 1840739697}
   endscene: {fileID: 990063503}
-  Mask: {fileID: 2878779950509762727, guid: d0fa5af256d06cf48bd5db0bf50db599, type: 3}
-  Iron: {fileID: 5066963582382249372, guid: d2f22efa4b91e064e8ef7e6190a85698, type: 3}
-  WashM: {fileID: 8701965349721019605, guid: 416fb504d8d179944842ebb1da19c09b, type: 3}
-  WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
-  ShoppingCart: {fileID: 8348937287018406637, guid: 8ee6e15ee5b0c8140b22896aec2022ab,
+  ShoppingCart: {fileID: 7667045143272721683, guid: 8ee6e15ee5b0c8140b22896aec2022ab,
     type: 3}
-  avoid_crowd: {fileID: 6078387321849273524, guid: 830754a5d093979479835ee1d3f180bc,
+  WipeDown: {fileID: 330491335952599701, guid: 032b4d2ad9b02a746b15a8475cb5bd67, type: 3}
+  GoodVentilation: {fileID: 5928756791872046158, guid: ab361a0d0954d6c4fad3e5622313e312,
     type: 3}
-  Bed_apart: {fileID: 4154624907186219674, guid: 5a1ca4bec048b834d92f685ab18fec92,
+  OneKnifeOneForkOneSpoon: {fileID: 3595967259157592532, guid: dc653a69caba2444fb82dc09e161f049,
+    type: 3}
+  PositiveEnergy: {fileID: 2185807046043422107, guid: d828733412906b74b8936dfc291be573,
+    type: 3}
+  SelfCheckup: {fileID: 7756318562795299200, guid: 95664c9d6f3ab764db7e2e9256502a56,
+    type: 3}
+  SelfIsolation: {fileID: 4888552665838033762, guid: 7c45ac7612b247c4987b4d97628d3089,
+    type: 3}
+  SleepApart: {fileID: 4381114893797702221, guid: 1c00a3d603070f44182d700503a3bfaa,
+    type: 3}
+  WhenToWorry: {fileID: 1477032197062850723, guid: d19217f3e8e839744a3e3c5b1261c690,
+    type: 3}
+  AvoidCrowds: {fileID: 6357310294336037479, guid: 830754a5d093979479835ee1d3f180bc,
+    type: 3}
+  IgnorantCustomer: {fileID: 4353490924987021529, guid: 693f82837d81f10409e831d5e926b947,
+    type: 3}
+  TP: {fileID: 7266165300957153371, guid: 020c3ea5fd483c74a800fc8aa5d8d015, type: 3}
+  Boredom: {fileID: 766591667286231567, guid: 5d3e2797e1142f94a889385b8be68d9c, type: 3}
+  CrowdedHallways: {fileID: 9203688851361534713, guid: 94e71219ee16871489289b3fa4c05d33,
     type: 3}
   CallAhead: {fileID: 3125738447408966955, guid: cb5bae97217025b4c91a0397e06ce1ab,
     type: 3}
@@ -1374,14 +1346,22 @@ MonoBehaviour:
     type: 3}
   WashDryIron: {fileID: 5252589484449701134, guid: af89066cdff3c9e4994cc0baac432990,
     type: 3}
-  dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
-  ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
+  AsymptomaticCarrier: {fileID: 6119215982531616678, guid: 5217217c0ef21514d81836d4f310822b,
     type: 3}
-  itchy: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0, type: 3}
-  unclean: {fileID: 296272898888828040, guid: 6147e53dbe6a9e143b0d978746c8f9fa, type: 3}
-  unwashed: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0,
+  ChestPain: {fileID: 1924356684890880217, guid: 944dd2520f0a23d4f9a43f3166a52263,
     type: 3}
-  cardBack: {fileID: 6984186805644984575, guid: d8ac59dfb8ccba64ead92c9e9b1eea5c,
+  DifficultyBreathing: {fileID: 8058763948126008445, guid: 1f731f36b193b6549ba88a47182e9356,
+    type: 3}
+  ItchyFace: {fileID: 55305086768406242, guid: 4e4ebb4e7f53e244ba23dccfe38fbdaa, type: 3}
+  MinorSymptoms: {fileID: 7778914011393287202, guid: 6fa3bb1216e62c04e865b53578ee9f30,
+    type: 3}
+  StrangeFever: {fileID: 5355179487763636874, guid: 73b861c9ee70ff4459b946ed202b27d4,
+    type: 3}
+  UncleanSurface: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
+    type: 3}
+  UnderlyingConditions: {fileID: 6572647752860878737, guid: bdfbe06c256df4a44a2720f7db41c2b1,
+    type: 3}
+  cardBack: {fileID: 4680588311600549706, guid: d9fc7103baf1d2c4cbf753b99b1e2dc7,
     type: 3}
   PlayerArea: {fileID: 1784190651}
   EnemyArea: {fileID: 453864160}
@@ -1391,7 +1371,7 @@ MonoBehaviour:
   healthBar: {fileID: 2059352331}
   social_D: {fileID: 57056340}
   roi: {fileID: 498676272}
-  enemyCardNum: 3
+  enemyCardNum: 0
 --- !u!114 &989742803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,7 +1494,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1685,7 +1665,6 @@ RectTransform:
   - {fileID: 2059352330}
   - {fileID: 498676269}
   - {fileID: 57056339}
-  - {fileID: 119762483}
   - {fileID: 990063502}
   - {fileID: 1641692931}
   - {fileID: 555824151}
@@ -2311,7 +2290,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2521,7 +2500,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3059,7 +3038,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1034499185}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

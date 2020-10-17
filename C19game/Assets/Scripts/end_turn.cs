@@ -11,15 +11,34 @@ public class end_turn : MonoBehaviour
     public AiBrain aiBrain;
     //Sceneloader
     public SceneLoader endscene;
-    // Player general card objects  --------- remove
-    public GameObject Mask;
     
-    public GameObject Iron;
-    public GameObject WashM;
-    public GameObject WashH;
+    //unique cards
+    //shop
     public GameObject ShoppingCart;
-    public GameObject avoid_crowd;
-    public GameObject Bed_apart;
+    public GameObject WipeDown;
+
+    //quaratine
+    public GameObject GoodVentilation;
+    public GameObject OneKnifeOneForkOneSpoon;
+    public GameObject PositiveEnergy;
+    public GameObject SelfCheckup;
+    public GameObject SelfIsolation;
+    public GameObject SleepApart;
+    public GameObject WhenToWorry;
+    
+    //school
+    public GameObject AvoidCrowds;
+
+    //unique enemy cards
+    //shop
+    public GameObject IgnorantCustomer;
+    public GameObject TP;
+
+    //quaratine
+    public GameObject Boredom;
+
+    //school
+    public GameObject CrowdedHallways;
 
     //reeces new cards:
     public GameObject CallAhead;
@@ -37,11 +56,14 @@ public class end_turn : MonoBehaviour
     public GameObject WashDryIron;
 
     //enemy card objects
-    public GameObject dirty;
-    public GameObject ignorant;
-    public GameObject itchy;
-    public GameObject unclean;
-    public GameObject unwashed;
+    public GameObject AsymptomaticCarrier;
+    public GameObject ChestPain;
+    public GameObject DifficultyBreathing;
+    public GameObject ItchyFace;
+    public GameObject MinorSymptoms;
+    public GameObject StrangeFever;
+    public GameObject UncleanSurface;
+    public GameObject UnderlyingConditions;
     public GameObject cardBack;
 
     //enemy and player playing area
@@ -67,6 +89,8 @@ public class end_turn : MonoBehaviour
     List<GameObject> enemyCardBack = new List<GameObject>();
     void Start()
     {
+        enemyCardNum = 6;
+
         //get the scene name
         Scene scene = SceneManager.GetActiveScene();
         Debug.Log(scene.name);
@@ -75,59 +99,80 @@ public class end_turn : MonoBehaviour
         {
             //add shopping related cards
             ShoppingCart.name = "Shop";
-            //deck.Add(ShoppingCart);
+            WipeDown.name = "WipeDown";
+            deck.Add(WipeDown);
+            deck.Add(ShoppingCart);
+
+            //add enemy cards
+            IgnorantCustomer.name = "IgnorantCustomer";
+            TP.name = "TP";
+            enemyDeck.Add(TP);
+            enemyDeck.Add(IgnorantCustomer);
+
         }
         if (scene.name.Contains("QuarantineLevel"))
         {
             //add quaratine related cards
-            Bed_apart.name = "Bed";
-            deck.Add(Bed_apart);
-        }
+            GoodVentilation.name = "GoodVentilation";
+            OneKnifeOneForkOneSpoon.name = "OneKnifeOneForkOneSpoon";
+            PositiveEnergy.name = "PositiveEnergy";
+            SelfCheckup.name = "SelfCheckup";
+            SelfIsolation.name = "SelfIsolation";
+            SleepApart.name = "SleepApart";
+            WhenToWorry.name = "WhenToWorry";
+            deck.Add(GoodVentilation);
+            deck.Add(OneKnifeOneForkOneSpoon);
+            deck.Add(PositiveEnergy);
+            deck.Add(SelfCheckup);
+            deck.Add(SelfIsolation);
+            deck.Add(SleepApart);
+            deck.Add(WhenToWorry);
+
+            //add enemy cards
+            Boredom.name = "Boredom";
+            enemyDeck.Add(Boredom);
+
+        }   
         if (scene.name.Contains("SchoolLevel"))
         {
+            //add school related cards
+            AvoidCrowds.name = "AvoidCrowds";
+            deck.Add(AvoidCrowds);
 
+            //add enemy cards
+            CrowdedHallways.name = "CrowdedHallways";
+            enemyDeck.Add(CrowdedHallways);
         }
 
 
         //gets the brain script from the brain object
         aiBrain = GameObject.Find("AiBrain").GetComponent<AiBrain>();
-
-        //set player card IDs --------- remove
-        Mask.name = "Mask";
-        
-        WashH.name = "Wash_H";
-        WashM.name = "Wash_M";
-        Iron.name = "Iron";
-
+                 
         //set reeces cards:
         loadupDeckGeneral();
 
-        //adds user cards to a deck ------- remove
-        /*
-        deck.Add(Mask);
-        deck.Add(Sanitizer);
-        deck.Add(Iron);
-        deck.Add(WashM);
-        deck.Add(WashH);
-        */
-        //add reeces cards to the deck
-
         //set enemy card ID
-        dirty.name = "dirtyCart";
-        ignorant.name = "Ignorant";
-        itchy.name = "Itchy";
-        unclean.name = "UncleanedSurface";
-        unwashed.name = "unwashedMask";
+        AsymptomaticCarrier.name = "AsymptomaticCarrier";
+        ChestPain.name = "ChestPain";
+        DifficultyBreathing.name = "DifficultyBreathing";
+        ItchyFace.name = "ItchyFace";
+        MinorSymptoms.name = "MinorSymptoms";
+        StrangeFever.name = "StrangeFever";
+        UncleanSurface.name = "UncleanSurface";
+        UnderlyingConditions.name = "UnderlyingConditions";
         cardBack.name = "cardback";
 
         //adds enemy cards to a deck
         
-        enemyDeck.Add(dirty);
-        enemyDeck.Add(ignorant); 
-        enemyDeck.Add(itchy); 
-        enemyDeck.Add(unclean); 
-        enemyDeck.Add(unwashed);
-        
+        enemyDeck.Add(AsymptomaticCarrier);
+        enemyDeck.Add(ChestPain); 
+        enemyDeck.Add(DifficultyBreathing); 
+        enemyDeck.Add(ItchyFace); 
+        enemyDeck.Add(MinorSymptoms);
+        enemyDeck.Add(StrangeFever);
+        enemyDeck.Add(UncleanSurface);
+        enemyDeck.Add(UnderlyingConditions);
+
 
         cards = GameObject.FindGameObjectsWithTag("Card");
 
@@ -138,7 +183,7 @@ public class end_turn : MonoBehaviour
 
         
         //fill enemy hand with cards
-        for (var i = 0; i < 4; i++)
+        for (var i = 0; i < enemyCardNum +1 ; i++)
         {
             GameObject enemyCard = Instantiate(enemyDeck[Random.Range(0, enemyDeck.Count)], new Vector3(0, 0, 0), Quaternion.identity);
             GameObject enemyCardBacks = Instantiate(cardBack, new Vector3(0, 0, 0), Quaternion.identity);
@@ -185,7 +230,7 @@ public class end_turn : MonoBehaviour
         // Code before the pause
 
         //create a zoomed card
-        Debug.Log(enemyCardNum);
+
         GameObject zoomCard = Instantiate(enemyCards[enemyCardNum], new Vector3(0, 0, 0), Quaternion.identity);
         zoomCard.transform.SetParent(GameObject.Find("Zoom Area").transform, false);
         zoomCard.name = "Zoom_card";

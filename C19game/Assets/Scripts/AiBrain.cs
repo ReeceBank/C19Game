@@ -21,39 +21,67 @@ public class AiBrain : MonoBehaviour
     //this method takes a game object. is meant to be used in the shopping level
     public void playEffect(GameObject gameObject)
     {
-        if (gameObject.name.Contains("dirtyCart"))
+        if (gameObject.name.Contains("AsymptomaticCarrier"))
+        {
+            roi.changeROI(5);
+            social_D.changeDistance(-0.5f);
+        }
+
+        else if (gameObject.name.Contains("ChestPain"))
+        {
+            healthBar.changeHealth(-5);
+            roi.changeROI(5);
+        }
+
+        else if (gameObject.name.Contains("DifficultyBreathing"))
+        {
+            roi.changeROI(5);
+        }
+
+        else if (gameObject.name.Contains("ItchyFace"))
+        {
+            roi.changeROI(10);
+        }
+
+        else if (gameObject.name.Contains("MinorSymptoms"))
+        {
+            roi.changeROI(5);
+        }
+        else if (gameObject.name.Contains("StrangeFever"))
+        {
+            roi.changeROI(5);
+        }
+
+        else if (gameObject.name.Contains("UncleanSurface"))
+        {
+            roi.changeROI(5);
+        }
+
+        else if (gameObject.name.Contains("UnderlyingConditions"))
         {
             healthBar.changeHealth(-5);
             roi.changeROI(5);
             social_D.changeDistance(-0.5f);
         }
 
-        else if (gameObject.name.Contains("Ignorant"))
-        {
-            healthBar.changeHealth(-5);
-            roi.changeROI(5);
-            social_D.changeDistance(-0.5f);
-        }
-
-        else if (gameObject.name.Contains("Itchy"))
+        else if (gameObject.name.Contains("Boredom"))
         {
             healthBar.changeHealth(-10);
-            roi.changeROI(5);
-            social_D.changeDistance(-0.5f);
         }
-
-        else if (gameObject.name.Contains("UncleanedSurface"))
-        {
-            healthBar.changeHealth(-5);
-            roi.changeROI(5);
-            social_D.changeDistance(-0.5f);
+        else if (gameObject.name.Contains("CrowdedHallways"))
+        {            
+            roi.changeROI(10);
+            social_D.changeDistance(-1);
         }
-
-        else if (gameObject.name.Contains("unwashedMask"))
+        else if (gameObject.name.Contains("IgnorantCustomer"))
         {
-            healthBar.changeHealth(-10);
-            roi.changeROI(5);
-            social_D.changeDistance(-0.5f);
+
+            roi.changeROI(10);
+            social_D.changeDistance(-1f);
+        }
+        else if (gameObject.name.Contains("TP"))
+        {
+
         }
     }
     //this method takes a game object. is meant to be used in the self isolation level

@@ -13,7 +13,7 @@ public class end_turn : MonoBehaviour
     public SceneLoader endscene;
     // Player general card objects  --------- remove
     public GameObject Mask;
-    public GameObject Sanitizer;
+    
     public GameObject Iron;
     public GameObject WashM;
     public GameObject WashH;
@@ -58,7 +58,7 @@ public class end_turn : MonoBehaviour
     public ROI_Bar roi;
 
     public int enemyCardNum;
-    public int cardIndex;
+
     //enemy and player decks
     List<GameObject> deck = new List<GameObject>();
     List<GameObject> enemyDeck = new List<GameObject>();
@@ -94,7 +94,7 @@ public class end_turn : MonoBehaviour
 
         //set player card IDs --------- remove
         Mask.name = "Mask";
-        Sanitizer.name = "Sanitizer";
+        
         WashH.name = "Wash_H";
         WashM.name = "Wash_M";
         Iron.name = "Iron";
@@ -185,6 +185,7 @@ public class end_turn : MonoBehaviour
         // Code before the pause
 
         //create a zoomed card
+        Debug.Log(enemyCardNum);
         GameObject zoomCard = Instantiate(enemyCards[enemyCardNum], new Vector3(0, 0, 0), Quaternion.identity);
         zoomCard.transform.SetParent(GameObject.Find("Zoom Area").transform, false);
         zoomCard.name = "Zoom_card";
@@ -249,7 +250,7 @@ public class end_turn : MonoBehaviour
         AP.reset_points();
 
         //win condition 
-        if (enemyCardNum +1== 0)
+        if (enemyCardNum +1 == 0)
         {
             endscene.LoadWin();
         }
@@ -283,7 +284,6 @@ public class end_turn : MonoBehaviour
         deck.Add(HospitalVisit);
         deck.Add(PhysicalDistance);
         deck.Add(SoapWash1);
-        deck.Add(Sanitizer);
         deck.Add(ThinkOfTheChildren);
         deck.Add(WashDryIron);
     }

@@ -1339,8 +1339,6 @@ MonoBehaviour:
   aiBrain: {fileID: 1840739697}
   endscene: {fileID: 990063503}
   Mask: {fileID: 2878779950509762727, guid: d0fa5af256d06cf48bd5db0bf50db599, type: 3}
-  Sanitizer: {fileID: 5661752740655891587, guid: d5d00c90de4dd494198a02dedc2aace4,
-    type: 3}
   Iron: {fileID: 5066963582382249372, guid: d2f22efa4b91e064e8ef7e6190a85698, type: 3}
   WashM: {fileID: 8701965349721019605, guid: 416fb504d8d179944842ebb1da19c09b, type: 3}
   WashH: {fileID: 3688184414885303956, guid: d6de3f913d8c0084586897716774e51a, type: 3}
@@ -1360,7 +1358,7 @@ MonoBehaviour:
     type: 3}
   GoodHygene: {fileID: 8307968967316077262, guid: b3e14bf1c40727848addab43b5d118cc,
     type: 3}
-  HandSanitiser: {fileID: 5661752740655891587, guid: d5d00c90de4dd494198a02dedc2aace4,
+  HandSanitiser: {fileID: 8642042874699339537, guid: e98c95bd4873fe14287b64b864a15e69,
     type: 3}
   HospitalVisit: {fileID: 8062288106206670641, guid: 289d1bfdc12435e47bb179e462c0cea2,
     type: 3}
@@ -1377,11 +1375,11 @@ MonoBehaviour:
   WashDryIron: {fileID: 5252589484449701134, guid: af89066cdff3c9e4994cc0baac432990,
     type: 3}
   dirty: {fileID: 2672597300067705784, guid: a4ff30b43462a60468708df87308e0d0, type: 3}
-  ignorant: {fileID: 5139183430196458805, guid: 210e76a5f11131049a6f20c8219b6ec4,
+  ignorant: {fileID: 3677264517903857362, guid: 5f0dc912a39e47641b9b2919dee8b63b,
     type: 3}
   itchy: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0, type: 3}
-  unclean: {fileID: 5139183430196458805, guid: 210e76a5f11131049a6f20c8219b6ec4, type: 3}
-  unwashed: {fileID: 5139183430196458805, guid: 210e76a5f11131049a6f20c8219b6ec4,
+  unclean: {fileID: 296272898888828040, guid: 6147e53dbe6a9e143b0d978746c8f9fa, type: 3}
+  unwashed: {fileID: 1500786203879707513, guid: 4bd271bd78fd7c246b99b5d0aec64dd0,
     type: 3}
   cardBack: {fileID: 6984186805644984575, guid: d8ac59dfb8ccba64ead92c9e9b1eea5c,
     type: 3}
@@ -1393,8 +1391,7 @@ MonoBehaviour:
   healthBar: {fileID: 2059352331}
   social_D: {fileID: 57056340}
   roi: {fileID: 498676272}
-  enemyCardNum: 0
-  cardIndex: 0
+  enemyCardNum: 3
 --- !u!114 &989742803
 MonoBehaviour:
   m_ObjectHideFlags: 0

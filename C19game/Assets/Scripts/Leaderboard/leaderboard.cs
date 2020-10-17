@@ -22,45 +22,40 @@ public class leaderboard : MonoBehaviour
         Scores scores;
         //Check if the file exists
 
-        if(PlayerPrefs.GetString("table") == "") // if it doesnt create one
+        if(PlayerPrefs.GetString("table") == "") 
         {
-            entryList = new List<Entry>()
-            {
-            new Entry{score = 0, name = "---"},
-            };
-
-            scores = new Scores { entries = entryList };
-            string json = JsonUtility.ToJson(scores);
-            PlayerPrefs.SetString("table", json);
-            PlayerPrefs.Save();
+            //do nothing
         }
         else
         {
+            
             string jsonString = PlayerPrefs.GetString("table");
-            //Debug.Log("exist");
+            Debug.Log("exist");
             scores = JsonUtility.FromJson<Scores>(jsonString);
-        }
-
-
-        //sort the scores
-        for (int i =0; i < scores.entries.Count; i++)
-        {
-            for(int j = i + 1; j < scores.entries.Count; j++)
+            //sort the scores
+            for (int i = 0; i < scores.entries.Count; i++)
             {
-                if(scores.entries[j].score > scores.entries[i].score)
+                for (int j = i + 1; j < scores.entries.Count; j++)
                 {
-                    Entry tmp = scores.entries[i];
-                    scores.entries[i] = scores.entries[j];
-                    scores.entries[j] = tmp;
+                    if (scores.entries[j].score > scores.entries[i].score)
+                    {
+                        Entry tmp = scores.entries[i];
+                        scores.entries[i] = scores.entries[j];
+                        scores.entries[j] = tmp;
+                    }
                 }
+            }
+            Debug.Log(scores.entries.Count);
+
+            //show the scores
+            for (int i = 0; i < scores.entries.Count; i++)
+            {
+                CreateTransform(scores.entries[i], entryContainer, transformList);
             }
         }
 
-        //show the scores
-        for(int i = 0; i < scores.entries.Count; i++)
-        {
-            CreateTransform(scores.entries[i], entryContainer, transformList);
-        }
+
+       
 
     }
 

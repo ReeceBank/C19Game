@@ -58,9 +58,23 @@ public class Score_controller : MonoBehaviour
     {
         Entry entry = new Entry { score = score, name = name };
 
-        string jsonString = PlayerPrefs.GetString("table");
-        Scores scores = JsonUtility.FromJson<Scores>(jsonString);
+        string jsonString;
+        Scores scores;
+        //check for a json file
+        // if it doesnt exist create one
+        if (PlayerPrefs.GetString("table") == "") 
+        {
+            List<Entry> temp = new List<Entry>();
 
+            temp.Add(entry);
+            string tmp = JsonUtility.ToJson(temp);
+            PlayerPrefs.SetString("table", tmp);
+            PlayerPrefs.Save();
+        }
+
+        //add the score
+        jsonString = PlayerPrefs.GetString("table");
+        scores = JsonUtility.FromJson<Scores>(jsonString);
         scores.entries.Add(entry);
 
         //sort the list
@@ -84,6 +98,7 @@ public class Score_controller : MonoBehaviour
         string json = JsonUtility.ToJson(scores);
         PlayerPrefs.SetString("table", json);
         PlayerPrefs.Save();
+
     }
 
     // a entry class

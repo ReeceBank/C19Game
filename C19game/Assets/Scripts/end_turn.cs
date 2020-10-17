@@ -269,7 +269,8 @@ public class end_turn : MonoBehaviour
         //destory a card in the hand so it looks like a card is played
         Destroy(enemyCardBack[enemyCardNum]);
         //Waits to display the enemy card for 3 seconds
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(StaticSpeed.speedmultiplier);
+        Debug.Log("speed: " + StaticSpeed.speedmultiplier);
         
         //Then destroys said enemy card after its been shown
         Destroy(zoomCard);

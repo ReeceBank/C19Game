@@ -4,5 +4,5 @@ using UnityEngine;
 
 public static class StaticSpeed
 {
-    public static int speedmultiplier = 3;
+    public static int speedmultiplier = 1;
 }

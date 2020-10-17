@@ -23,7 +23,7 @@ public class AiBrain : MonoBehaviour
     {
         if (gameObject.name.Contains("AsymptomaticCarrier"))
         {
-            roi.changeROI(5);
+            roi.changeROI(10);
             social_D.changeDistance(-0.5f);
         }
 
@@ -35,11 +35,15 @@ public class AiBrain : MonoBehaviour
 
         else if (gameObject.name.Contains("DifficultyBreathing"))
         {
-            roi.changeROI(5);
+            roi.changeROI(15);
         }
 
         else if (gameObject.name.Contains("ItchyFace"))
         {
+            if (BuffEffects.faceMask == true)
+            {
+                BuffEffects.faceMask = false;
+            }
             roi.changeROI(10);
         }
 
@@ -49,12 +53,20 @@ public class AiBrain : MonoBehaviour
         }
         else if (gameObject.name.Contains("StrangeFever"))
         {
-            roi.changeROI(5);
+            roi.changeROI(10);
         }
 
         else if (gameObject.name.Contains("UncleanSurface"))
         {
-            roi.changeROI(5);
+            if(BuffEffects.faceMask == true) // must not put on a facemask with unclean hands
+            {
+                BuffEffects.faceMask = false;
+            }
+            if (BuffEffects.cleanHands == true) // your hands arnt clean
+            {
+                BuffEffects.cleanHands = false;
+            }
+            roi.changeROI(15);
         }
 
         else if (gameObject.name.Contains("UnderlyingConditions"))
@@ -64,34 +76,28 @@ public class AiBrain : MonoBehaviour
             social_D.changeDistance(-0.5f);
         }
 
+        //for the self isolation level
         else if (gameObject.name.Contains("Boredom"))
         {
             healthBar.changeHealth(-10);
         }
+
+        //for the school level
         else if (gameObject.name.Contains("CrowdedHallways"))
         {            
-            roi.changeROI(10);
+            roi.changeROI(15);
             social_D.changeDistance(-1);
         }
+
+        //for the shop level
         else if (gameObject.name.Contains("IgnorantCustomer"))
         {
-
-            roi.changeROI(10);
+            roi.changeROI(15);
             social_D.changeDistance(-1f);
         }
         else if (gameObject.name.Contains("TP"))
         {
-
+            //because people hoarded TP at the start of the pandemic for no reason
         }
-    }
-    //this method takes a game object. is meant to be used in the self isolation level
-    public void playSelfEffect(GameObject gameObject)
-    {
-
-    }
-    //this method takes a game object. is meant to be used in the school level
-    public void playSchoolEffect(GameObject gameObject)
-    {
-
     }
 }

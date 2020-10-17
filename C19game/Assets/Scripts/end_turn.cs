@@ -339,5 +339,15 @@ public class end_turn : MonoBehaviour
         deck.Add(ThinkOfTheChildren);
         deck.Add(WashDryIron);
     }
+    public void addSoap2()
+    {
+        GameObject playerCard = Instantiate(SoapWash2, new Vector3(0, 0, 0), Quaternion.identity);
+        playerCard.transform.SetParent(PlayerArea.transform, false);
+    }
+    public void addSoap3()
+    {
+        GameObject playerCard = Instantiate(SoapWash3, new Vector3(0, 0, 0), Quaternion.identity);
+        playerCard.transform.SetParent(PlayerArea.transform, false);
+    }
 
 }

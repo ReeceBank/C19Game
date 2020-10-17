@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class dragdrop : MonoBehaviour
 {
+    //private  endTurn;
     private GameObject canvas;
     private bool isDrag = false;
     private bool overzone = false;
@@ -16,11 +17,13 @@ public class dragdrop : MonoBehaviour
     public ROI_Bar roi;
     public Action_point AP;
 
+
     /*
      * gets and sets infection slider, risk of infection slider, social distance slider and action points
      */
     private void Awake()
     {
+        //endTurn = GameObject.Find("EndTurnButton").GetComponent<end_turn>;
         canvas = GameObject.Find("Main Canvas");
         healthBar = GameObject.Find("Health Bar").GetComponent<HealthBarController>();
         roi = GameObject.Find("SliderROI").GetComponent<ROI_Bar>();

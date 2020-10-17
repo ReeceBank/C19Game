@@ -24,16 +24,19 @@ public class Action_point : MonoBehaviour
         text.text = points + "/3";
     }
 
+    //gets points
     public int get()
     {
         return points;
     }
 
+    //reduces points
     public void reduce()
     {
         points--;
     }
 
+    //resets points
     public void reset_points()
     {
         points = 3;

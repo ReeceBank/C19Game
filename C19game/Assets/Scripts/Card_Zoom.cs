@@ -7,12 +7,14 @@ public class Card_Zoom : MonoBehaviour
     public GameObject Canvas;
     private GameObject zoomCard;
 
+    //gets and sets canvas
     public void Start()
     {
         Canvas = GameObject.Find("Zoom Area");
 
     }
 
+    //when the card is held, zoom in on the card
     public void OnholdEnter()
     {
 
@@ -26,6 +28,7 @@ public class Card_Zoom : MonoBehaviour
         
     }
 
+    //detroyed zoomed card image when card is not held
     public void OnholdExit()
     {
 

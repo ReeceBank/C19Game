@@ -87,6 +87,10 @@ public class end_turn : MonoBehaviour
 
     List<GameObject> enemyCards = new List<GameObject>();
     List<GameObject> enemyCardBack = new List<GameObject>();
+
+    /*
+     * Deals enemy and user cards on start
+     */
     void Start()
     {
         enemyCardNum = 6;
@@ -203,6 +207,10 @@ public class end_turn : MonoBehaviour
 
     }
 
+    /*
+     * The player is dealt cards based on the amount of cards in their hand
+     * Creates the enemy play
+     */
     public void Click()
     {
         cards = GameObject.FindGameObjectsWithTag("Card");
@@ -220,11 +228,9 @@ public class end_turn : MonoBehaviour
         StartCoroutine(Enemy_Play_with_Delay());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
+    /*
+     *Zooms in on enemy card and plays card effects 
+     */
     IEnumerator Enemy_Play_with_Delay()
     {
         // Code before the pause
@@ -300,6 +306,7 @@ public class end_turn : MonoBehaviour
             endscene.LoadWin();
         }
     }
+
     //method to load up the player deck with general cards. You will have to define them in constructors first.
     public void loadupDeckGeneral()
     {

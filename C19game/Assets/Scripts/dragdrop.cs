@@ -16,6 +16,9 @@ public class dragdrop : MonoBehaviour
     public ROI_Bar roi;
     public Action_point AP;
 
+    /*
+     * gets and sets infection slider, risk of infection slider, social distance slider and action points
+     */
     private void Awake()
     {
         canvas = GameObject.Find("Main Canvas");
@@ -36,12 +39,14 @@ public class dragdrop : MonoBehaviour
 
     }
 
+    //deals with cards collisions
     private void OnCollisionEnter2D(Collision2D collision)
     {
         overzone = true;
         dropzone = collision.gameObject;
     }
 
+    //gets the start of the card drag
     public void startDrag()
     {
         startParent = transform.parent.gameObject;
@@ -49,6 +54,9 @@ public class dragdrop : MonoBehaviour
         isDrag = true;
     }
 
+    /*
+     * handles end of drag events, such as card plays
+     */
     public void endDrag()
     {
         isDrag = false;
@@ -66,12 +74,11 @@ public class dragdrop : MonoBehaviour
         }
     }
 
+    /*
+    * code the effects of cards played
+    */
     public void playeffect()
     {
-        /*
-         * code the effects of cards played
-         * */
-        // just using +5 as a place holder
         if (gameObject.name.Contains("CallAhead"))
         {
             roi.changeROI(-5);
